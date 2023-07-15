@@ -12,7 +12,7 @@
 }
 
 /*esto lo hago para cambiar colores en base a si esta activo o no el dark mode*/
-@media screen and (prefers-color-scheme:light){
+@media screen and (prefers-color-scheme:dark){
     :root{    
     --blanco: #181818;
     --blanco-2:rgba(0,0,0,.2);
