@@ -109,12 +109,14 @@ select {
 body {
 
     min-height: 100vh;
+    
     background-color: var(--negro);
     color: var(--blanco);
     font-smoot: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: none;
+   
 
 }
 
@@ -330,6 +332,8 @@ li{
     padding: 2em;
     transition: all 0.5s ease;
     transform: translateX(0%);
+
+    overflow-x: hidden;
 }
 
 .carrusel .contenedor .article { 
@@ -344,8 +348,8 @@ li{
 }
 
 .carrusel .article .a{    
+    
     width: 100%;
-
     display: flex;
     justify-content: center;
 }
@@ -371,9 +375,9 @@ li{
 
 .carrusel .article .h4 {
     
-
-    width: 23em;
-    height: 98%;
+    width: 103%;
+    max-width: 23em;
+    height: 98.5%;
     color: var(--blanco);
 
     backdrop-filter: blur(1rem);
@@ -381,8 +385,7 @@ li{
     position: absolute;
     bottom: 0;
     padding: 0em 4em;
-    margin-bottom: 0.3em;
-    
+margin-bottom: 0.2em;
 
     font-size: 1.5rem;
     font-family: var(--tipo-alternativo);
@@ -542,3 +545,27 @@ li{
     transform: scale(0.7);
 
 }
+
+@media (max-width: 515px) {
+    /* Estilos específicos para el h2 en pantallas más pequeñas */
+    .skills .h2 {
+      font-size: 3rem; /* Tamaño de letra reducido para pantallas más pequeñas */
+    }
+  }
+
+  @media (max-width: 433px) {
+    /* Estilos específicos para el h2 en pantallas más pequeñas */
+    .proyectos .h2 {
+      font-size: 3rem; /* Tamaño de letra reducido para pantallas más pequeñas */
+    }
+  }
+
+  @media (max-width: 494px) {
+    /* Estilos específicos para el h2 en pantallas más pequeñas */
+    .info .h2 {
+      font-size: 3rem; /* Tamaño de letra reducido para pantallas más pequeñas */
+    }
+    .info .h3 {
+        font-size: 2rem; /* Tamaño de letra reducido para pantallas más pequeñas */
+      }
+  }
