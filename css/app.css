@@ -309,214 +309,64 @@ li{
 }
 
 
-.contenedor{
-    margin: 0;
-    padding: 0;        
+.contenedor{     
+    /* aspect-ratio: 10/16; */
     display: flex;    
-    justify-content: center;
-    align-items: center;    
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    height: 576px;
+    /* scroll-snap-type: x mandatory; */
+    /* box-sizing: border-box; */
 }
-
-.slider{    
-    width: 90vh;    
-    height: auto;    
+.contenedor img{
+    /* position: sticky; */
     position: relative;
-    overflow: hidden;    
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 5px;
+    /* scroll-snap-align: center; */
 }
 
-
-.slider .slide::before{
-    content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  opacity: 0; 
-  transition: opacity 0.3s ease; 
-  pointer-events: none;
-}
-.slider .slide:hover::before {
-    opacity: 1; 
-  }
-
-  .slider .slide p {
+.contenedor p{    
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 80%; /* Ancho del texto */
-    color: white; /* Color del texto */
-  }
-
-.slides{    
-    width: 500%;
-    height: 100%;
-    display: flex;
-    transition: 2s;
-    overflow: hidden;
-}
-.slides input {
-    display: none;    
-}
-.slide {
-        
-    position: relative;
-    flex: 0 0 auto;
-    
-    display: flex;
-    justify-content:center;    
-    align-items: center;
-    width: 20%;    
-    height: auto;
-    transition: 2s;
-    overflow: hidden;
-}
-
-.slide-content{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    text-align: center;
-    background-color: transparent;
-    transition: background-color 0.3s;
-    /* overflow: hidden;
-    transition: 2s; */
-}
-
-.slide img{
-    display: block;
-
-    object-fit: cover;
-    object-position: center center;
-    
-
-    height: auto;
-    border-radius: 10px;
-    /* transition: transform 0.5s; */
-}
-
-.seccion .proyectos .navigation-manual {    
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;        
-}
-
-.manual-btn {    
-    border: 2px solid var(--blanco-2);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;        
-}
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-.manual-btn:hover {
-    background: var(--blanco-2);
-}
-#radio1:checked ~ .first {
-    margin-left: 0;
-}
-#radio2:checked ~ .first {
-    margin-left: -20%;
-}
-#radio3:checked ~ .first {
-    margin-left: -40%;
-}
-#radio4:checked ~ .first {
-    margin-left: -60%;
-}
-#radio5:checked ~ .first {
-    margin-left: -80%;
-}
-
-.navigation-auto {
-    position: absolute;
-    display: flex;
-    width: 800px;
-    justify-content: center;
-    margin-top: 460px;
-}
-
-
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #558aff;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #558aff;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #558aff;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #558aff;
-}
-#radio5:checked ~ .navigation-auto .auto-btn5 {
-    background: #558aff;
-}
-
-.slide .p{
-       
-    position: absolute;
-    top: 0;
-    left: 0;      
-    width: 100%;
-    height: 100%;
+    transform: translate(-50%,10%);
+    background-color: rgba(0,0,0,.3);
     color: white;
-    font-size: 1,9em;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:10px;
-    margin-bottom: 0;
-    padding-top: 0;    
-    padding-bottom: 0;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    padding: 2em;
+    font-size: 1.2em;
     opacity: 0;
-    box-sizing: border-box;
-    transition: opacity 0.5s;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    overflow: hidden;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+    border-radius: 5px;
+    /* quiero que el texto este justificado y centrado */
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: center;    
+
 }
 
-.slide:hover .slide-content{
-    background-color: rgba(0,0,0,0.5);
-}
-
-.slide:hover .p{   
+.contenedor img:hover{
+    cursor: crosshair;
+    width: 300px;
     opacity: 1;
-    padding: 12em;
+    filter:contrast(120%)
 }
-.slide-content:hover .img{
-    opacity: 0.3;
+    /* cuando paso el mouse por encima de la imagen si quiero que p se vea por encima de la imagen */
+.contenedor img:hover +p{
+    opacity: 1;
+    visibility: visible;    
+      /* border-radius: 5px; */
+    /* z-index: 1; */
 }
 
-.slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-.slide:hover::before {
-    opacity: 0;
-}
+
+
 
 .skills .rrss {
     width: 100%;
