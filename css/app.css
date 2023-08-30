@@ -49,7 +49,7 @@ figure {
 a {
     display: block;
     text-decoration: none;
-    color: inherit;
+    color: var(--blanco);
     cursor: none;
 }
 
