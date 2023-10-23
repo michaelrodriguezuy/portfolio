@@ -9,7 +9,7 @@
                     Software con figma + postamn"
     />
 
-    <title>Michael Rodriguez | Desarrollador</title>
+    <title>Michael Rodriguez | Full stack developer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,15 +25,20 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/font/style.css" />
+    <!-- <link rel="stylesheet" href="css/font/style.css" /> -->
     <link rel="stylesheet" href="css/app.css" />
 
-    <script
+    <!-- <script
       defer
       src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
     ></script>
-    <script defer src="js/app.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+     -->
 
+    <!-- carusel JS -->
+    <script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script defer src="js/app.js"></script>
 
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -117,7 +122,7 @@
       <div class="seccion" id="inicio">
         <section class="seccion info">
           <h2 class="h2">Michael Rodríguez</h2>
-          <h3 class="h3">Desarrollador</h3>
+          <h3 class="h3">Full stack developer</h3>
 
           <ul class="ul">
             <li class="li">
@@ -142,49 +147,114 @@
         </section>
       </div>
 
-      <section class="seccion proyectos" id="proyectos">
-        <h2 class="h2">Proyectos</h2>
-        <p class="p">
-          Estos son algunos de los proyectos que he realizado, algunos trabajos
-          personales, otros para clientes.
-        </p>
+      <h2 class="h2">Proyectos</h2>
+      <p class="p">
+        Estos son algunos proyectos que he realizado, trabajos personales, otros
+        para clientes.
+      </p>
+      <section class="slider">
+        <!-- INICIO DE LOS PROYECTOS -->
+        <div class="slider_container container">
+          <img src="assets/leftArrow.svg" class="slider_arrow" id="before" />
+          <section class="slider_body slider_body--show" data-id="1">
+            <div class="slider_texts">
+              <h2 class="subtitle">eCommerce</h2>
+              <p class="slider_review">
+                eCommerce creado con react + Vite + material UI + axios +
+                firebase + formik + sweetAlert + uuid + yup + react-router-dom +
+                canvas-confetti
+              </p>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/eCommerce.png" class="slider_img" />
 
-        <div class="contenedor">                              
-                
-                <img class="img" src="assets/yerbalito.png" alt="yerbalito" />
-                
-                <p class="p">Sitio web del club Yerbalito de baby fútbol creado con HTML + CSS + React + Firebase</p>
-                
-
-    <img class="img"  src="assets/pelis.png" alt="pelis" />
-
-                    
-                    <p class="p">En este proyecto utilicé react+vite, Material IU, Axios, Formik y Yup, React-Router-Dom, Json-server y Canvas-confetti. Login + Context, ProtectedRoutes.</p>
-                
-
-                    <img class="img" src="assets/eqm.png" alt="eqm" />
-                    
-                    <p class="p">EQM es un sistema de gestion administrativa,
-                        venta y alquileres de equipamiento medico. Creado con vb.net + PostgreSql, con facturación electrónica..</p>
-                    
-               
-
-                    <img class="img" src="assets/olimarteam.png" alt="olimarteam" />
-                    
-                    <p class="p">Sitio web de la empresa olimarteam, creado con HTML + CSS + MySQL</p>
-                
-                
-
-                    <img class="img" src="assets/portfolio.png" alt="portfolio" />
-                    
-                    <p class="p">Mi porfolio, si, el que estas viendo, HTML + CSS + JS
-                    </p>                      
-                
-             
+              <div class="image-overlay">
+                <img src="assets/eCommerce.png" />
+              </div>
+            </figure>
+          </section>
+          <section class="slider_body" data-id="2">
+            <div class="slider_texts">
+              <h2 class="subtitle">Club yerbalito</h2>
+              <p class="slider_review">
+                Sitio web del club Yerbalito de baby fútbol creado con HTML +
+                CSS + React + Firebase
+              </p>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/yerbalito.png" class="slider_img" />
+              <div class="image-overlay">
+                <img src="assets/yerbalito.png" />
+              </div>
+            </figure>
+          </section>
+          <section class="slider_body" data-id="3">
+            <div class="slider_texts">
+              <h2 class="subtitle">Listado de peliculas</h2>
+              <p class="slider_review">
+                En este proyecto utilicé react+vite, Material IU, Axios, Formik
+                y Yup, React-Router-Dom, Json-server y Canvas-confetti. Login +
+                Context, ProtectedRoutes.
+              </p>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/pelis.png" class="slider_img" />
+              <div class="image-overlay">
+                <img src="assets/pelis.png" />
+              </div>
+            </figure>
+          </section>
+          <section class="slider_body" data-id="4">
+            <div class="slider_texts">
+              <h2 class="subtitle">EQM</h2>
+              <p class="slider_review">
+                EQM es un sistema de gestion administrativa, venta y alquileres
+                de equipamiento medico. Creado con vb.net + PostgreSql, con
+                facturación electrónica..
+              </p>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/eqm.png" class="slider_img" />
+              <div class="image-overlay">
+                <img src="assets/eqm.png" />
+              </div>
+            </figure>
+          </section>
+          <section class="slider_body" data-id="5">
+            <div class="slider_texts">
+              <h2 class="subtitle">olimarteam</h2>
+              <p class="slider_review">
+                Sitio web de la empresa olimarteam, creado con HTML + CSS +
+                MySQL
+              </p>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/olimarteam.png" class="slider_img" />
+              <div class="image-overlay">
+                <img src="assets/olimarteam.png" />
+              </div>
+            </figure>
+          </section>
+          <section class="slider_body" data-id="6">
+            <div class="slider_texts">
+              <h2 class="subtitle">Portfolio</h2>
+              <p class="slider_review">
+                Mi porfolio, si, el que estas viendo, HTML + CSS + JS
+              </p>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/portfolio.png" class="slider_img" />
+              <div class="image-overlay">
+                <img src="assets/portfolio.png" />
+              </div>
+            </figure>
+          </section>
+          <img src="assets/rigthArrow.svg" class="slider_arrow" id="next" />
         </div>
-
-        <!-- FIN DE LOS PROYECTOS -->
       </section>
+
+      <!-- FIN DE LOS PROYECTOS -->
+      <script src="js/sliders.js"></script>
 
       <section class="seccion skills" id="skills">
         <h2 class="h2">Habilidades</h2>

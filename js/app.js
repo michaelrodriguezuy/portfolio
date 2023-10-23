@@ -5,31 +5,34 @@
 
 
 $(document).ready(function () {
-    
-    $('body').on({'mousemove'   : function (e) {
 
-        console.clear();
+    $('body').on({
+        'mousemove': function (e) {
 
-        let clienteX = e.originalEvent.clientX;
-        let clienteY = e.originalEvent.clientY;
+            // console.clear();
 
-        $('#cursor').css({
-            'left'  : (clienteX-40) + 'px',
-            'top'   : (clienteY-40) + 'px'
-        });
+            let clienteX = e.originalEvent.clientX;
+            let clienteY = e.originalEvent.clientY;
 
-    }})
+            $('#cursor').css({
+                'left': (clienteX - 40) + 'px',
+                'top': (clienteY - 40) + 'px'
+            });
+
+        }
+    })
 
 
     $('.a').on({
-        'mouseover'   : function () {
+        'mouseover': function () {
             $('#cursor').addClass('mini');
         },
-        'mouseout'   : function () {
+        'mouseout': function () {
             $('#cursor').removeClass('mini');
         },
     })
 
 
+  
 })
 
