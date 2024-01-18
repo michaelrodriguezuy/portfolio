@@ -290,6 +290,50 @@ li {
     text-align: justify;
 } */
 
+/* etiquetas para lenguajes */
+.tag {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.react { background-color: #61dafb; color: #3d3b3b; }
+.vite { background-color: #646cff; color: #ffffffc2; }
+.material-ui { background-color: #0081cb; color: #ffffffc2; }
+.react-router-dom { background-color: #ca4245; color: #ffffffc2; }
+.firebase { background-color: #f7c52b; color: #3d3b3b; }
+.axios { background-color: #5a2d82; color: #ffffffc2; }
+.formik { background-color: #f16061; color: #ffffffc2; }
+.yup { background-color: #979038e6; color: #ffffffc2; }
+.sweetalert { background-color: #7c4f4f; color: #ffffffc2; }
+.uuid { background-color: #6abf69; color: #3d3b3b; }
+.canvas-confetti { background-color: #38a68e; color: #ffffffc2; }
+.css { background-color: #2965f1; color: #ffffffc2; }
+.html { background-color: #e34c26; color: #ffffffc2; }
+.json-server { background-color: #11938e; color: #ffffffc2; }
+.login { background-color: #3b63de; color: #ffffffc2; }
+.context { background-color: #9a30c7; color: #ffffffc2; }
+.protected { background-color: #bc2763; color: #ffffffc2; }  
+.vb-net { background-color: #5d8aa8; color: #ffffffc2; }
+.postgresql { background-color: #336791; color: #ffffffc2; }
+.eFactura { background-color: #2d998a; color: #ffffffc2; }
+.mysql { background-color: #7c9c2c; color: #ffffffc2; }
+.js { background-color: #f0db4f; color: #3d3b3b; }
+.java { background-color: #e76f00; color: #ffffffc2; }
+.spring { background-color: #6db33f; color: #ffffffc2; }
+.aws { background-color: #ff9900; color: #3d3b3b; }
+.ansible { background-color: #000000; color: #ffffffc2; }
+.bash { background-color: #62b75c4e; color: #3d3b3b; }
+.git { background-color: #cd664e; color: #ffffffc2; }
+.github { background-color: #198393; color: #ffffffc2; }
+.tailwind { background-color: #0db7ed; color: #ffffffc2; }  
+.postman { background-color: #7952b3; color: #ffffffc2; }
+
+
 .h2 {
   font-family: var(--tipo-alternativo);
   font-weight: 600;
