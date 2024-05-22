@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "'Cascadia Code'"
+    "editor.fontFamily": "'Cascadia Code'",
+    "liveServer.settings.port": 5501
 }

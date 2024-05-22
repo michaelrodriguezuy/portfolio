@@ -24,6 +24,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!-- <link rel="stylesheet" href="css/font/style.css" /> -->
     <link rel="stylesheet" href="css/app.css" />
@@ -127,21 +131,53 @@
           <ul class="ul">
             <li class="li">
               <a
-                href="https://www.linkedin.com/in/michaelrodriguezuy/"
+                href="https://www.linkedin.com/in/michaelrodriguezuy"
                 class="a"
-                title="LinkedIn"
+                title="Hablemos por linkedin"
                 target="_blank"
-                >Hablar por LinkedIn</a
+                rel="noopener noreferrer"
               >
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <img
+                    src="https://www.svgrepo.com/show/303172/linkedin-logo.svg "
+                    alt="LinkedIn"
+                    class="svg"
+                    width="96"
+                    height="64"
+                  />
+                </div>
+              </a>
             </li>
             <li class="li">
               <a
                 href="https://github.com/michaelrodriguezuy"
                 class="a"
-                title="Github"
+                title="Visita mi GitHub"
                 target="_blank"
-                >Visita mi Github</a
+                rel="noopener noreferrer"
               >
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    class="svg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                  <img
+                    src="https://www.svgrepo.com/show/372862/github-full.svg"
+                    alt="GitHub"
+                    class="svg"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+              </a>
             </li>
           </ul>
         </section>
@@ -149,10 +185,13 @@
 
       <h2 class="h2">Proyectos</h2>
       <p class="p">
-        Estos son algunos de los proyectos que he realizado integramente, en otros, he tenido participación. Estos han sido para clientes y otros son personales.
+        Estos son algunos de los proyectos que he realizado, algunos
+        integramente, en otros, he tenido participación. Estos han sido creados
+        para clientes y otros son proyectos personales.
       </p>
+
+      <!-- INICIO DE LOS PROYECTOS -->
       <section class="slider">
-        <!-- INICIO DE LOS PROYECTOS -->
         <div class="slider_container container">
           <img src="assets/leftArrow.svg" class="slider_arrow" id="before" />
           <section class="slider_body slider_body--show" data-id="1">
@@ -160,7 +199,7 @@
               <h2 class="subtitle">eCommerce</h2>
               <p class="slider_review">
                 Esta plataforma eCommerce fue desarrollada utilizando
-                mercadoPago como pasarella de pagos.
+                mercadoPago como pasarela de pagos.
               </p>
               <span class="tag react">React</span>
               <span class="tag vite">Vite</span>
@@ -175,17 +214,11 @@
               <span class="tag react-router-dom">React Router DOM</span>
               <span class="tag canvas-confetti">Canvas Confetti</span>
             </div>
+
             <figure class="slider_picture">
-              
-              <img src="assets/eCommerce.png" class="slider_img" />
-
-              
-              <div class="image-overlay">
-                <a href="https://ec3.vercel.app/login" target="_blank">            
-                  <img src="assets/eCommerce.png" />
-                </a>
-              </div>
-
+              <a href="https://ec3.vercel.app/login" target="_blank">
+                <img src="assets/eCommerce.png" class="slider_img" />
+              </a>
             </figure>
           </section>
           <section class="slider_body" data-id="2">
@@ -203,14 +236,9 @@
               <span class="tag firebase">Firebase</span>
             </div>
             <figure class="slider_picture">
-              <img src="assets/yerbalito.png" class="slider_img" />
-
-              <div class="image-overlay">
-                <a href="http://yerbalito.uy" target="_blank">            
-                  <img src="assets/yerbalito.png" />                  
-                </a>
-              </div>
-
+              <a href="http://yerbalito.uy" target="_blank">
+                <img src="assets/yerbalito.png" class="slider_img" />
+              </a>
             </figure>
           </section>
           <section class="slider_body" data-id="3">
@@ -219,9 +247,11 @@
               <p class="slider_review">
                 En este sitio podrás agregar/eliminar películas, editar tu lista
                 de favoritos, también podrás ver el detalle de cada película,
-                este sitio fue desarrollado con el fin de realizar practicas en
-                React y algunos hooks.
+                este sitio fue desarrollado con el fin de realizar practicas de
+                algunos hooks de
+                <i title="React" class="fab fa-react"></i>
               </p>
+
               <span class="tag react">React</span>
               <span class="tag vite">Vite</span>
               <span class="tag material-ui">Material UI</span>
@@ -238,23 +268,19 @@
               <span class="tag canvas-confetti">Canvas Confetti</span>
             </div>
             <figure class="slider_picture">
-              <img src="assets/pelis.png" class="slider_img" />
-
-              <div class="image-overlay">
-                <a href="https://pelis-alpha.vercel.app" target="_blank">            
-                  <img src="assets/pelis.png" />                  
-                </a>
-              </div>
-
-
+              <a href="https://pelis-alpha.vercel.app" target="_blank">
+                <img src="assets/pelis.png" class="slider_img" />
+              </a>
             </figure>
           </section>
           <section class="slider_body" data-id="4">
             <div class="slider_texts">
               <h2 class="subtitle">EQM</h2>
               <p class="slider_review">
-                EQM es un sistema de gestión administrativa, control de stock, venta y alquileres
-                de equipamiento médico y facturación electrónica.
+                EQM es un sistema de gestión administrativa, control de stock,
+                venta y alquileres de equipamiento médico y facturación
+                electrónica diseñado para una empresa del medio local, el cual
+                ya lleva 8 años en funcionamiento.
               </p>
               <span class="tag vb-net">VB.net</span>
               <span class="tag postgresql">PostgreSQL</span>
@@ -262,9 +288,6 @@
             </div>
             <figure class="slider_picture">
               <img src="assets/eqm.png" class="slider_img" />
-              <div class="image-overlay">
-                <img src="assets/eqm.png" />
-              </div>
             </figure>
           </section>
           <!-- <section class="slider_body" data-id="5">
@@ -305,16 +328,25 @@
               <h2 class="subtitle">Sitio web Touruguay</h2>
               <p class="slider_review">
                 Proyecto final de la carrera Certified Tech Developer en
-                DigitalHouse, este proyecto fue realizado en equipo, cumpliendo
-                con nuevas metodologias de trabajo. En dicho proyecto, asumí los
-                roles de desarrollador backend e infraestructura, tambien
-                realice algunos aportes en el frontend. Si bien el proyecto se
-                monto originalmente sobre la infraestructura de AWS ya no se encuentra
-                habilitada por temas de licenciamiento con la institucion. Ahora lo podemos ver en railway .
+                <a href="https://www.digitalhouse.com/" target="_blank">
+                  Digital House <i class="fas fa-link"></i></a
+                >,
+                <a href="https://www.mercadolibre.com.uy/" target="_blank">
+                  Mercado libre <i class="fas fa-link"></i>
+                </a>
+                y
+                <a href="https://www.globant.com/" target="_blank">
+                  Globant <i class="fas fa-link"></i></a
+                >, este proyecto fue realizado en equipo, cumpliendo con nuevas
+                metodologias de trabajo. En dicho proyecto, asumí el rol de
+                desarrollador Backend y DevOps, tambien realice algunos aportes
+                en el Frontend. Si bien el proyecto se montó originalmente sobre
+                la infraestructura de AWS ya no se encuentra habilitada por
+                temas de licenciamiento. Ahora lo podemos ver disponible en
+                Railway.
               </p>
               <span class="tag java">JAVA</span>
               <span class="tag spring">Spring boot</span>
-
               <span class="tag react">React</span>
               <span class="tag vite">Vite</span>
               <span class="tag tailwind">Tailwind</span>
@@ -322,28 +354,23 @@
               <span class="tag formik">Formik</span>
               <span class="tag login">Login</span>
               <span class="tag context">Context</span>
-              <span class="tag protected">ProtectedRoutes</span>
+              <span class="tag protected">Protected Routes</span>
               <span class="tag canvas-confetti">Canvas Confetti</span>
-
               <span class="tag mysql">MySQL</span>
-
               <span class="tag aws">AWS</span>
               <span class="tag ansible">Ansible</span>
               <span class="tag bash">Bash</span>
-              <span class="tag git">Git</span>              
+              <span class="tag git">Git</span>
               <span class="tag github">GitHub</span>
-              <span class="tag postman">Postman</span>   
-
+              <span class="tag postman">Postman</span>
             </div>
             <figure class="slider_picture">
-              <img src="assets/Touruguay.png" class="slider_img" />
-
-              <div class="image-overlay">
-                <a href="https://touruguay-front-production.up.railway.app" target="_blank">                   
-                  <img src="assets/Touruguay.png" />
-                </a>
-              </div>
-
+              <a
+                href="https://touruguay-front-production.up.railway.app"
+                target="_blank"
+              >
+                <img src="assets/Touruguay.png" class="slider_img" />
+              </a>
             </figure>
           </section>
           <img src="assets/rigthArrow.svg" class="slider_arrow" id="next" />
@@ -357,344 +384,342 @@
         <h2 class="h2">Habilidades</h2>
 
         <ul class="rrss">
-          <!-- lenguajes de programacion -->
-          <li class="li">
-            <a
-              class="a"
-              title="javascript"
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                alt="javascript"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <li class="li">
-            <a
-              class="a"
-              title="php"
-              href="https://www.php.net"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-                alt="php"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <li class="li">
-            <a
-              class="a"
-              title="java"
-              href="https://www.java.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-                alt="java"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <!-- frontend development -->
-          <p>|</p>
+          <!-- frontend -->
+          <div class="columna">
+            <h3 class="h3">Frontend</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="javascript"
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  alt="javascript"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="react"
+                href="https://reactjs.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                  alt="react"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="html"
+                href="https://www.w3.org/html/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                  alt="html5"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
 
-          <li class="li">
-            <a
-              class="a"
-              title="react"
-              href="https://reactjs.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-                alt="react"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <li class="li">
-            <a
-              class="a"
-              title="html"
-              href="https://www.w3.org/html/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                alt="html5"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-
-          <li class="li">
-            <a
-              class="a"
-              title="css"
-              href="https://www.w3schools.com/css/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-                alt="css3"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <!-- <li class="li">
-            <a
-              class="a"
-              title="bootstrap"
-              href="https://getbootstrap.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-                alt="bootstrap"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li> -->
-          <!-- backend development -->
-          <p>|</p>
-          <li class="li">
-            <a
-              class="a"
-              title="spring"
-              href="https://spring.io/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
-                alt="spring"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
+            <li class="li">
+              <a
+                class="a"
+                title="css"
+                href="https://www.w3schools.com/css/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                  alt="css3"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </div>
+          <!-- backend -->
+          <div class="columna">
+            <h3 class="h3">Backend</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="java"
+                href="https://www.java.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                  alt="java"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="spring"
+                href="https://spring.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
+                  alt="spring"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </div>
 
           <!-- database -->
-          <p>|</p>
-          <li class="li">
-            <a
-              class="a"
-              title="mysql"
-              href="https://www.mysql.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-                alt="mysql"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
+          <div class="columna">
+            <h3 class="h3">Bases de datos</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="mysql"
+                href="https://www.mysql.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                  alt="mysql"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
 
-          <li class="li">
-            <a
-              class="a"
-              title="postgresql"
-              href="https://www.postgresql.org"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
-                alt="postgresql"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
+            <li class="li">
+              <a
+                class="a"
+                title="postgresql"
+                href="https://www.postgresql.org"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                  alt="postgresql"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </div>
 
           <!-- devops -->
-          <p>|</p>
-          <li class="li">
-            <a
-              class="a"
-              title="docker"
-              href="https://www.docker.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
-                alt="docker"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <li class="li">
-            <a
-              class="a"
-              title="aws"
-              href="https://aws.amazon.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                alt="aws"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <li class="li">
-            <a
-              class="a"
-              title="bash"
-              href="https://www.gnu.org/software/bash/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
-                alt="bash"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <!-- software -->
-          <p>|</p>
+          <div class="columna">
+            <h3 class="h3">DevOps</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="docker"
+                href="https://www.docker.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
+                  alt="docker"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="aws"
+                href="https://aws.amazon.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                  alt="aws"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="bash"
+                href="https://www.gnu.org/software/bash/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
+                  alt="bash"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </div>
+          <!-- tecnologias -->
+          <div class="columna">
+            <h3 class="h3">Tecnologías</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="figma"
+                href="https://www.figma.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+                  alt="figma"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
 
-          <li class="li">
-            <a
-              class="a"
-              title="figma"
-              href="https://www.figma.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-                alt="figma"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-
-          <li class="li">
-            <a
-              class="a"
-              title="postman"
-              href="https://postman.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-                alt="postman"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
+            <li class="li">
+              <a
+                class="a"
+                title="postman"
+                href="https://postman.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+                  alt="postman"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="git"
+                href="https://git-scm.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                  alt="git"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </div>
           <!-- others -->
-          <p>|</p>
-          <li class="li">
-            <a
-              class="a"
-              title="linux"
-              href="https://www.linux.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
-                alt="linux"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
-          <li class="li">
-            <a
-              class="a"
-              title="git"
-              href="https://git-scm.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                class="svg"
-                src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-                alt="git"
-                width="40"
-                height="40"
-              />
-            </a>
-          </li>
+          <div class="columna">
+            <h3 class="h3">Otros</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="php"
+                href="https://www.php.net"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                  alt="php"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="linux"
+                href="https://www.linux.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                  alt="linux"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </div>
         </ul>
       </section>
 
       <section class="seccion about" id="about">
         <h2 class="h2">Sobre mí</h2>
         <p class="p">
-          Soy desarrollador de software apasionado con más de 10 años de
-          experiencia. Comencé mi carrera en la vieja escuela, aprendiendo los
-          fundamentos de la programación en lenguajes como VB y Java, recuerdo
-          que mi primer desarrollo fue el juego de la mosqueta en Turbo Pascal.
-          Sin embargo, siempre mantuve la programación en un segundo plano, ya
-          que mi profesión principal es la de técnico en telecomunicaciones.
+          👋... Me considero una persona apasionada por el desarrollo. Comencé
+          en la vieja escuela, hace unos 10 años, aprendiendo los fundamentos de
+          la programación en lenguajes como
+          <img
+            src="https://img.icons8.com/?size=32&id=vgMoO3QkEnKf&format=png&color=000000"
+            alt="Visual Basic .NET"
+            style="display: inline-block; vertical-align: middle"
+          />
+          y <span class="icon"><i class="fab fa-java"></i></span>, recuerdo mi
+          primer proyecto... el juego de la mosqueta desarrollado en
+          <img
+            src="https://img.icons8.com/?size=32&id=JAIA7odpg0ZZ&format=png&color=000000"
+            alt="Turbo Pascal"
+            style="display: inline-block; vertical-align: middle"
+          />
+          . En ese tiempo, mas allá de haber mantenido a la programación en un
+          segundo plano, nunca se apagó la llama, lo que se llevó la mayor parte
+          de mi tiempo fue mi rol como técnico en telecomunicaciones.
         </p>
         <p class="p">
-          En los últimos años, he decidido que es hora de que la programación
-          sea mi profesión de preferencia. Por eso, me he embarcado en un
-          proceso de renovación, especializándome en desarrollo frontend y
-          backend. En la actualidad, tengo conocimientos sólidos en los
-          siguientes lenguajes y tecnologías: <b>Frontend:</b> HTML, CSS, JavaScript,
-          React, <b>Backend:</b> Node.js, Java, Spring Boot, <b>Bases de datos:</b> MySQL,
-          PostgreSQL, <b>Herramientas y metodologías:</b> Git, GitHub, metodologías
-          ágiles, Docker, AWS, Postman
-        </p>
-        <!--<p class="p">IF EXISTS ((familia AND fútbol AND murga) AND (mate amargo)) BEGIN EXECUTE(felicidad) END</p>-->
-        <p class="p">
-          Estoy constantemente aprendiendo y creciendo como desarrollador, y
-          siempre estoy buscando nuevas oportunidades para aplicar mis
-          habilidades. Estoy listo para aprovechar mi experiencia en desarrollo
-          de software para contribuir significativamente a proyectos
+          En los últimos años, he decidido que es hora de que el desarrollo sea
+          mi única profesión. Por esto, me he embarcado en un proceso de
+          renovación, especializándome en desarrollo frontend y backend.
+
+          <!--<p class="p">IF EXISTS ((familia AND fútbol AND murga) AND (mate amargo)) BEGIN EXECUTE(felicidad) END</p>-->
+
+          Constantemente estoy buscando nuevas oportunidades para aplicar mis
+          habilidades. Estoy listo para aprovechar mi experiencia en el
+          desarrollo de software para contribuir significativamente a proyectos
           desafiantes. Actualmente estoy disponible para proyectos
           independientes o posiciones remotas.
         </p>
@@ -770,7 +795,7 @@
 
           <li class="li">
             <a
-              href="mailto:hola@olimarteam.uy?subject=enviado%20desde%20la%20web"
+              href="mailto:hola@olimarteam.uy?subject=Te%20contacto%20desde%20tu%20web%20personal"
               class="a"
               title="hola@olimarteam.uy"
               target="_blank"
@@ -790,6 +815,19 @@
               </svg>
             </a>
           </li>
+
+          <li class="li">
+            <a
+              href="https://wa.me/59899163200?text=Hola%20Michael,%20te%20contacto%20desde%20tu%20web%20personal."
+              class="a"
+              title="whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="icon"><i class="fab fa-whatsapp fa-3x"></i></span>
+            </a>
+          </li>
+
           <li class="li">
             <a
               href="http://www.olimarteam.uy/olimarteam/CV.pdf"
