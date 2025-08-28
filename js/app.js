@@ -1,38 +1,22 @@
 'use strict'
 
-// const grande    = document.querySelector('.contenedor')
-// const punto     = document.querySelectorAll('.punto')
-
-
-$(document).ready(function () {
-
-    $('body').on({
-        'mousemove': function (e) {
-
-            // console.clear();
-
-            let clienteX = e.originalEvent.clientX;
-            let clienteY = e.originalEvent.clientY;
-
-            $('#cursor').css({
-                'left': (clienteX - 40) + 'px',
-                'top': (clienteY - 40) + 'px'
-            });
-
-        }
-    })
-
-
-    $('.a').on({
-        'mouseover': function () {
-            $('#cursor').addClass('mini');
-        },
-        'mouseout': function () {
-            $('#cursor').removeClass('mini');
-        },
-    })
-
-
-  
-})
+document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.getElementById('cursor');
+    
+    // Movimiento del cursor
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = (e.clientX - 40) + 'px';
+        cursor.style.top = (e.clientY - 40) + 'px';
+    });
+    
+    // Efecto hover en enlaces
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('mini');
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('mini');
+        });
+    });
+});
 

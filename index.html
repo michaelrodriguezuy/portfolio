@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="desarrollador de software, manejo de lenguajes con Java + PHP + vb.net, frontend develop con HTML + CSS + Bootstrap, database con MySQL + Postgresql, devOps con Docker + AWS, 
-                    Software con figma + postamn"
-    />
+    <meta name="description" content="Michael Rodríguez - Desarrollador Full Stack con 10+ años de experiencia. Especializado en React, Java, Spring Boot, PostgreSQL y AWS. Portfolio con proyectos reales para clientes en Uruguay.">
+    <meta name="keywords" content="desarrollador full stack, React, Java, Spring Boot, PostgreSQL, AWS, Uruguay, desarrollador web, programador">
+    <meta name="author" content="Michael Rodríguez">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://olimarteam.uy/">
+    <meta property="og:title" content="Michael Rodríguez | Desarrollador Full Stack">
+    <meta property="og:description" content="Desarrollador Full Stack con experiencia en React, Java, Spring Boot y AWS. Portfolio con proyectos reales para clientes en Uruguay.">
+    <meta property="og:image" content="https://olimarteam.uy/img/michael.png">
 
-    <title>Michael Rodriguez | Full stack developer</title>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://olimarteam.uy/">
+    <meta property="twitter:title" content="Michael Rodríguez | Desarrollador Full Stack">
+    <meta property="twitter:description" content="Desarrollador Full Stack con experiencia en React, Java, Spring Boot y AWS. Portfolio con proyectos reales para clientes en Uruguay.">
+    <meta property="twitter:image" content="https://olimarteam.uy/img/michael.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://olimarteam.uy/">
+
+    <title>Michael Rodríguez | Desarrollador Full Stack | Uruguay</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -32,20 +45,48 @@
     <!-- <link rel="stylesheet" href="css/font/style.css" /> -->
     <link rel="stylesheet" href="css/app.css" />
 
-    <!-- <script
-      defer
-      src="https://code.jquery.com/jquery-3.7.0.slim.min.js"ßß
-    ></script>
-    <script defer src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-     -->
-
-    <!-- carusel JS -->
-    <script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+    <!-- JavaScript -->
     <script defer src="js/app.js"></script>
 
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michael Rodríguez",
+      "jobTitle": "Desarrollador Full Stack",
+      "description": "Desarrollador Full Stack con 10+ años de experiencia en React, Java, Spring Boot, PostgreSQL y AWS",
+      "url": "https://olimarteam.uy",
+      "image": "https://olimarteam.uy/img/michael.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/michaelrodriguezuy",
+        "https://github.com/michaelrodriguezuy"
+      ],
+      "knowsAbout": [
+        "React",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "AWS",
+        "JavaScript",
+        "HTML",
+        "Docker"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Uruguay"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      }
+    }
+    </script>
+
+    <meta name="google-site-verification" content="liXfo1Q7co9R26Ng704tK8bK_Fr3srr3LQ5FV8FNGco" />
   </head>
 
   <body>
@@ -116,15 +157,15 @@
             <a href="#proyectos" title="proyectos" class="a">proyectos</a>
           </li>
           <li class="li">
-            <a href="#about" title="Contacto" class="a">Sobre mí</a>
+            <a href="#sobre-mi" title="Sobre mí" class="a">Sobre mí</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main">
-      <div class="seccion" id="inicio">
-        <section class="seccion info">
+    <main class="main" role="main">
+      <section class="seccion" id="inicio">
+        <div class="seccion info">
           <h2 class="h2">Michael Rodríguez</h2>
           <h3 class="h3">Full stack developer</h3>
 
@@ -144,6 +185,7 @@
                     class="svg"
                     width="96"
                     height="64"
+                    aria-hidden="true"
                   />
                 </div>
               </a>
@@ -175,6 +217,7 @@
                     class="svg"
                     width="64"
                     height="64"
+                    aria-hidden="true"
                   />
                 </div>
               </a>
@@ -183,23 +226,27 @@
         </section>
       </div>
 
-      <h2 class="h2">Proyectos</h2>
-      <p class="p">
-        Estos son algunos de los proyectos que he realizado, algunos
-        integramente, en otros, he tenido participación. Estos han sido creados
-        para clientes y otros son proyectos personales.
-      </p>
+      <section id="proyectos" class="seccion-proyectos" aria-labelledby="proyectos-titulo">
+        <h2 class="h2" id="proyectos-titulo">Proyectos</h2>
+        <p class="p">
+          Estos son algunos de los proyectos que he realizado, algunos
+          integramente, en otros, he tenido participación. Estos han sido creados
+          para clientes y otros son proyectos personales.
+        </p>
 
-      <!-- INICIO DE LOS PROYECTOS -->
-      <section class="slider">
+        <!-- INICIO DE LOS PROYECTOS -->
+        <div class="slider">
         <div class="slider_container container">
-          <img src="assets/leftArrow.svg" class="slider_arrow" id="before" />
+          <img src="assets/leftArrow.svg" class="slider_arrow" id="before" alt="Proyecto anterior" aria-label="Ver proyecto anterior" />
           <section class="slider_body slider_body--show" data-id="1">
             <div class="slider_texts">
               <h2 class="subtitle">eCommerce</h2>
               <p class="slider_review">
-                Esta plataforma eCommerce fue desarrollada utilizando
-                mercadoPago como pasarela de pagos.
+                Plataforma eCommerce completa desarrollada con React y Material UI. 
+                Integra MercadoPago como pasarela de pagos, Firebase para autenticación 
+                y base de datos, y Formik para validación de formularios. 
+                <strong>Proyecto personal</strong> que demuestra habilidades full-stack 
+                y sirvió como base para proyectos comerciales posteriores.
               </p>
               <span class="tag react">React</span>
               <span class="tag vite">Vite</span>
@@ -216,40 +263,20 @@
             </div>
 
             <figure class="slider_picture">
-              <a href="https://ec3.vercel.app/login" target="_blank">
-                <img src="assets/eCommerce.png" class="slider_img" />
+              <a href="https://e-commerce-v4.vercel.app/" target="_blank">
+                <img src="assets/eCommerce.png" class="slider_img" alt="Vista previa eCommerce desarrollado en React" loading="lazy" />
               </a>
             </figure>
           </section>
           <section class="slider_body" data-id="2">
             <div class="slider_texts">
-              <h2 class="subtitle">Sitio web del Club Yerbalito</h2>
-              <p class="slider_review">
-                Esta web fue creada con el fin de controlar y mostrar a los
-                socios el avance y/o situación de los pagos mensuales, Yerbalito
-                es un club de baby fútbol de la ciudad de Treinta y Tres,
-                Uruguay.
-              </p>
-              <span class="tag html">HTML</span>
-              <span class="tag css">CSS</span>
-              <span class="tag react">React</span>
-              <span class="tag firebase">Firebase</span>
-            </div>
-            <figure class="slider_picture">
-              <a href="http://yerbalito.uy" target="_blank">
-                <img src="assets/yerbalito.png" class="slider_img" />
-              </a>
-            </figure>
-          </section>
-          <section class="slider_body" data-id="3">
-            <div class="slider_texts">
               <h2 class="subtitle">Sitio web de películas</h2>
               <p class="slider_review">
-                En este sitio podrás agregar/eliminar películas, editar tu lista
-                de favoritos, también podrás ver el detalle de cada película,
-                este sitio fue desarrollado con el fin de realizar practicas de
-                algunos hooks de
-                <i title="React" class="fab fa-react"></i>
+                Aplicación web para gestión de películas con sistema de autenticación 
+                y rutas protegidas. Permite agregar/eliminar películas, gestionar 
+                favoritos y ver detalles. <strong>Proyecto de práctica</strong> que 
+                demuestra el uso avanzado de hooks de React, Context API y 
+                autenticación JWT.
               </p>
 
               <span class="tag react">React</span>
@@ -269,81 +296,20 @@
             </div>
             <figure class="slider_picture">
               <a href="https://pelis-alpha.vercel.app" target="_blank">
-                <img src="assets/pelis.png" class="slider_img" />
+                <img src="assets/pelis.png" class="slider_img" alt="Vista previa del sitio web de películas" loading="lazy" />
               </a>
             </figure>
           </section>
-          <section class="slider_body" data-id="4">
-            <div class="slider_texts">
-              <h2 class="subtitle">EQM</h2>
-              <p class="slider_review">
-                EQM es un sistema de gestión administrativa, control de stock,
-                venta y alquileres de equipamiento médico y facturación
-                electrónica diseñado para una empresa del medio local, el cual
-                ya lleva 8 años en funcionamiento.
-              </p>
-              <span class="tag vb-net">VB.net</span>
-              <span class="tag postgresql">PostgreSQL</span>
-              <span class="tag eFactura">e-Factura</span>
-            </div>
-            <figure class="slider_picture">
-              <img src="assets/eqm.png" class="slider_img" />
-            </figure>
-          </section>
-          <!-- <section class="slider_body" data-id="5">
-            <div class="slider_texts">
-              <h2 class="subtitle">Sitio web de olimarteam</h2>
-              <p class="slider_review">
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
-                <span class="tag mysql">MySQL</span>
-              </p>
-            </div>
-            <figure class="slider_picture">
-              <img src="assets/olimarteam.png" class="slider_img" />
-              <div class="image-overlay">
-                <img src="assets/olimarteam.png" />
-              </div>
-            </figure>
-          </section> 
-          <section class="slider_body" data-id="5">
-            <div class="slider_texts">
-              <h2 class="subtitle">Mi portfolio</h2>
-              <p class="slider_review">
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
-                <span class="tag js">JavaScript</span>
-              </p>
-            </div>
-            <figure class="slider_picture">
-              <img src="assets/portfolio.png" class="slider_img" />
-              <div class="image-overlay">
-                <img src="assets/portfolio.png" />
-              </div>
-            </figure>
-          </section>
-        -->
-          <section class="slider_body" data-id="5">
+          <section class="slider_body" data-id="3">
             <div class="slider_texts">
               <h2 class="subtitle">Sitio web Touruguay</h2>
               <p class="slider_review">
-                Proyecto final de la carrera Certified Tech Developer en
-                <a href="https://www.digitalhouse.com/" target="_blank">
-                  Digital House <i class="fas fa-link"></i></a
-                >,
-                <a href="https://www.mercadolibre.com.uy/" target="_blank">
-                  Mercado libre <i class="fas fa-link"></i>
-                </a>
-                y
-                <a href="https://www.globant.com/" target="_blank">
-                  Globant <i class="fas fa-link"></i></a
-                >, este proyecto fue realizado en equipo, cumpliendo con nuevas
-                metodologias de trabajo. En dicho proyecto, asumí el rol de
-                desarrollador Backend y DevOps, tambien realice algunos aportes
-                en el Frontend. Si bien el proyecto se montó originalmente sobre
-                la infraestructura de AWS ya no se encuentra habilitada por
-                temas de licenciamiento. Ahora lo podemos ver disponible en
-                Railway.
+                <strong>Proyecto académico</strong> desarrollado en equipo para la carrera 
+                Certified Tech Developer (Digital House, Mercado Libre, Globant). 
+                Plataforma de turismo con roles de usuario, reservas y gestión de 
+                destinos. Mi rol: <strong>Backend y DevOps</strong> con Java/Spring Boot, 
+                AWS, Docker y Ansible. Demuestra trabajo en equipo, metodologías ágiles 
+                y despliegue en la nube.
               </p>
               <span class="tag java">JAVA</span>
               <span class="tag spring">Spring boot</span>
@@ -369,16 +335,106 @@
                 href="https://touruguay-front-production.up.railway.app"
                 target="_blank"
               >
-                <img src="assets/Touruguay.png" class="slider_img" />
+                <img src="assets/Touruguay.png" class="slider_img" alt="Vista previa del sitio web Touruguay" loading="lazy" />
               </a>
             </figure>
           </section>
-          <img src="assets/rigthArrow.svg" class="slider_arrow" id="next" />
+          <section class="slider_body" data-id="4">
+            <div class="slider_texts">
+              <h2 class="subtitle">Sitio web del Club Yerbalito</h2>
+              <p class="slider_review">
+                Sistema de gestión para club de baby fútbol en Treinta y Tres, Uruguay. 
+                Permite a los socios consultar el estado de sus pagos mensuales y 
+                a la administración gestionar cuotas. <strong>Proyecto para cliente real</strong> 
+                que resuelve una necesidad específica de la comunidad.
+              </p>
+              <span class="tag html">HTML</span>
+              <span class="tag css">CSS</span>
+              <span class="tag react">React</span>
+              <span class="tag firebase">Firebase</span>
+            </div>
+            <figure class="slider_picture">
+              <a href="http://yerbalito.uy" target="_blank">
+                <img src="assets/yerbalito.png" class="slider_img" alt="Vista previa del sitio web del Club Yerbalito" loading="lazy" />
+              </a>
+            </figure>
+          </section>
+          <section class="slider_body" data-id="5">
+            <div class="slider_texts">
+              <h2 class="subtitle">EQM</h2>
+              <p class="slider_review">
+                Sistema integral de gestión para empresa de equipamiento médico. 
+                Controla stock, ventas, alquileres y facturación electrónica. 
+                <strong>Proyecto empresarial</strong> desarrollado en VB.NET con 
+                PostgreSQL, operativo desde hace 8 años. Demuestra experiencia 
+                en sistemas legacy y mantenimiento a largo plazo.
+              </p>
+              <span class="tag vb-net">VB.net</span>
+              <span class="tag postgresql">PostgreSQL</span>
+              <span class="tag eFactura">e-Factura</span>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/eqm.png" class="slider_img" alt="Vista previa del sistema EQM" loading="lazy"/>
+            </figure>
+          </section>
+          
+          <section class="slider_body" data-id="6">
+            <div class="slider_texts">
+              <h2 class="subtitle">Kuka Store</h2>
+              <p class="slider_review">
+                <strong>Proyecto comercial real</strong> para tienda online de vestimenta 
+                para jóvenes. Plataforma eCommerce completa con catálogo de productos, 
+                carrito de compras, sistema de pagos y panel de administración. 
+                Desarrollado con React, Material UI y MercadoPago. 
+                <strong>Cliente real</strong> con tienda operativa.
+              </p>
+              <span class="tag react">React</span>
+              <span class="tag material-ui">Material UI</span>
+              <span class="tag mercado-pago">Mercado Pago</span>
+              <span class="tag firebase">Firebase</span>
+              <span class="tag formik">Formik</span>
+              <span class="tag yup">Yup</span>
+              <span class="tag axios">Axios</span>
+            </div>
+            <figure class="slider_picture">
+              <a href="https://www.kukastore.com.uy" target="_blank">
+                <img src="assets/kukastore.png" class="slider_img" alt="Vista previa de Kuka Store" loading="lazy" />
+              </a>
+            </figure>
+          </section>
+          
+          <section class="slider_body" data-id="7">
+            <div class="slider_texts">
+              <h2 class="subtitle">India Cueros</h2>
+              <p class="slider_review">
+                <strong>Proyecto comercial real</strong> para negocio de venta de 
+                artesanías y artículos en cuero. Sitio web corporativo con catálogo 
+                de productos, información del negocio y formulario de contacto. 
+                Diseño responsive y optimizado para SEO. <strong>Cliente real</strong> 
+                con presencia online establecida.
+              </p>
+              <span class="tag react">React</span>
+              <span class="tag material-ui">Material UI</span>
+              <span class="tag firebase">Firebase</span>
+              <span class="tag formik">Formik</span>
+              <span class="tag yup">Yup</span>
+              <span class="tag axios">Axios</span>
+              <span class="tag seo">SEO</span>
+            </div>
+            <figure class="slider_picture">
+              <a href="https://www.indiacueros.com.uy" target="_blank">
+                <img src="assets/indiacueros.png" class="slider_img" alt="Vista previa de India Cueros" loading="lazy" />
+              </a>
+            </figure>
+          </section>
+          <img src="assets/rigthArrow.svg" class="slider_arrow" id="next" alt="Proyecto siguiente" aria-label="Ver proyecto siguiente" />
         </div>
       </section>
 
-      <!-- FIN DE LOS PROYECTOS -->
-      <script src="js/sliders.js"></script>
+        </div>
+        <!-- FIN DE LOS PROYECTOS -->
+        <script src="js/sliders.js"></script>
+      </section>
 
       <section class="seccion skills" id="skills">
         <h2 class="h2">Habilidades</h2>
@@ -401,6 +457,7 @@
                   alt="javascript"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -418,6 +475,7 @@
                   alt="react"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -435,6 +493,7 @@
                   alt="html5"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -453,6 +512,7 @@
                   alt="css3"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -474,6 +534,7 @@
                   alt="java"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -491,6 +552,7 @@
                   alt="spring"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -513,6 +575,7 @@
                   alt="mysql"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -531,6 +594,7 @@
                   alt="postgresql"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -553,6 +617,7 @@
                   alt="docker"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -570,6 +635,7 @@
                   alt="aws"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -587,6 +653,7 @@
                   alt="bash"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -608,6 +675,7 @@
                   alt="figma"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -626,6 +694,7 @@
                   alt="postman"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -643,6 +712,7 @@
                   alt="git"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -664,6 +734,7 @@
                   alt="php"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -681,6 +752,7 @@
                   alt="linux"
                   width="40"
                   height="40"
+                  aria-hidden="true"
                 />
               </a>
             </li>
@@ -688,29 +760,42 @@
         </ul>
       </section>
 
-      <section class="seccion about" id="about">
+      <section class="seccion about" id="sobre-mi">
         <h2 class="h2">Sobre mí</h2>
-        <p class="p">
-          👋... Me considero una persona apasionada por el desarrollo. Comencé
-          en la vieja escuela, hace unos 10 años, aprendiendo los fundamentos de
-          la programación en lenguajes como
-          <img
-            src="https://img.icons8.com/?size=32&id=vgMoO3QkEnKf&format=png&color=000000"
-            alt="Visual Basic .NET"
-            style="display: inline-block; vertical-align: middle"
-          />
-          y <span class="icon"><i class="fab fa-java"></i></span>, recuerdo especialmente mi
-          primer proyecto... el juego de la mosqueta desarrollado con Turbo Pascal.
-          
-            Aunque la programación fue durante años una actividad secundaria —mi rol principal era como técnico en telecomunicaciones—, la pasión siempre estuvo ahí.
-        </p>
-        <p class="p">
-          En los últimos años decidí hacer del desarrollo mi única profesión. Me especialicé en frontend y backend, y estoy siempre en busca de nuevas oportunidades donde aplicar mis conocimientos y seguir creciendo.
+        
+        <div class="about-content">
+          <div class="about-story">
+            <h3 class="about-subtitle">Mi Historia</h3>
+            <p class="p">
+              👋 ¡Hola! Soy Michael, un desarrollador apasionado por crear soluciones digitales que marquen la diferencia. 
+              Mi viaje en la programación comenzó hace más de 10 años, cuando desarrollé mi primer proyecto: 
+              <strong>el juego de la mosqueta con Turbo Pascal</strong> 🎮
+            </p>
+            <p class="p">
+              Aunque durante años trabajé como técnico en telecomunicaciones, la programación siempre fue mi pasión secreta. 
+              Hace poco tiempo decidí dar el salto y convertirme en desarrollador full-stack, especializándome en 
+              <strong>React, Java, Spring Boot</strong> y tecnologías modernas.
+            </p>
+          </div>
 
-          <!--<p class="p">IF EXISTS ((familia AND fútbol AND murga) AND (mate amargo)) BEGIN EXECUTE(felicidad) END</p>-->
+          <div class="about-approach">
+            <h3 class="about-subtitle">Mi Enfoque</h3>
+            <p class="p">
+              Creo en el <strong>desarrollo ágil</strong> y la <strong>colaboración efectiva</strong>. 
+              Me especializo en crear aplicaciones escalables, con código limpio y documentado. 
+              Siempre busco aprender nuevas tecnologías y metodologías para entregar la mejor experiencia al usuario.
+            </p>
+          </div>
 
-          Actualmente estoy disponible para proyectos independientes o posiciones remotas.
-        </p>
+          <div class="about-availability">
+            <h3 class="about-subtitle">Disponibilidad</h3>
+            <p class="p">
+              Actualmente estoy disponible para <strong>proyectos independientes</strong> y 
+              <strong>posiciones remotas</strong>. Me adapto rápidamente a nuevos equipos y 
+              tecnologías, y estoy siempre dispuesto a enfrentar nuevos desafíos.
+            </p>
+          </div>
+        </div>
 
         <ul class="rrss">
           <li class="li">
@@ -804,17 +889,7 @@
             </a>
           </li>
 
-          <li class="li">
-            <a
-              href="https://wa.me/59899163200?text=Hola%20Michael,%20te%20contacto%20desde%20tu%20web%20personal."
-              class="a"
-              title="whatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="icon"><i class="fab fa-whatsapp fa-3x"></i></span>
-            </a>
-          </li>
+          
 
           <li class="li">
             <a
@@ -841,6 +916,20 @@
         </ul>
       </section>
     </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+      <a 
+        href="https://wa.me/59899163200?text=Hola%20Michael,%20te%20contacto%20desde%20tu%20web%20personal."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+        class="whatsapp-button"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Hablemos!</span>
+      </a>
+    </div>
 
     <footer class="footer">
       <span class="span"> Michael Rodríguez</span>
