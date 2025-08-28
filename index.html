@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Michael Rodríguez - Desarrollador Full Stack con 10+ años de experiencia. Especializado en React, Java, Spring Boot, PostgreSQL y AWS. Portfolio con proyectos reales para clientes en Uruguay.">
-    <meta name="keywords" content="desarrollador full stack, React, Java, Spring Boot, PostgreSQL, AWS, Uruguay, desarrollador web, programador">
+    <meta name="description" content="Michael Rodríguez - Desarrollador Full Stack con 10+ años de experiencia. Especializado en React, Java, Spring Boot, PostgreSQL, Docker, Postman, Vercel, Firebase, Jira. Portfolio con proyectos reales para clientes en Uruguay.">
+    <meta name="keywords" content="desarrollador full stack, React, Java, Spring Boot, PostgreSQL, Docker, Postman, Vercel, Firebase, Jira, Uruguay, desarrollador web, programador">
     <meta name="author" content="Michael Rodríguez">
     <meta name="robots" content="index, follow">
     
@@ -12,14 +12,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://olimarteam.uy/">
     <meta property="og:title" content="Michael Rodríguez | Desarrollador Full Stack">
-    <meta property="og:description" content="Desarrollador Full Stack con experiencia en React, Java, Spring Boot y AWS. Portfolio con proyectos reales para clientes en Uruguay.">
+    <meta property="og:description" content="Desarrollador Full Stack con experiencia en React, Java, Spring Boot, Docker, Postman, Vercel, Firebase, Jira. Portfolio con proyectos reales para clientes en Uruguay.">
     <meta property="og:image" content="https://olimarteam.uy/img/michael.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://olimarteam.uy/">
     <meta property="twitter:title" content="Michael Rodríguez | Desarrollador Full Stack">
-    <meta property="twitter:description" content="Desarrollador Full Stack con experiencia en React, Java, Spring Boot y AWS. Portfolio con proyectos reales para clientes en Uruguay.">
+    <meta property="twitter:description" content="Desarrollador Full Stack con experiencia en React, Java, Spring Boot, Docker, Postman, Vercel, Firebase, Jira. Portfolio con proyectos reales para clientes en Uruguay.">
     <meta property="twitter:image" content="https://olimarteam.uy/img/michael.png">
 
     <!-- Canonical URL -->
@@ -58,7 +58,7 @@
       "@type": "Person",
       "name": "Michael Rodríguez",
       "jobTitle": "Desarrollador Full Stack",
-      "description": "Desarrollador Full Stack con 10+ años de experiencia en React, Java, Spring Boot, PostgreSQL y AWS",
+      "description": "Desarrollador Full Stack con 10+ años de experiencia en React, Java, Spring Boot, PostgreSQL, Docker, Postman, Vercel, Firebase, Jira",
       "url": "https://olimarteam.uy",
       "image": "https://olimarteam.uy/img/michael.png",
       "sameAs": [
@@ -86,6 +86,7 @@
     }
     </script>
 
+    <!-- Google Site Verification -->
     <meta name="google-site-verification" content="liXfo1Q7co9R26Ng704tK8bK_Fr3srr3LQ5FV8FNGco" />
   </head>
 
@@ -186,6 +187,7 @@
                     width="96"
                     height="64"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                 </div>
               </a>
@@ -218,6 +220,7 @@
                     width="64"
                     height="64"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                 </div>
               </a>
@@ -229,9 +232,10 @@
       <section id="proyectos" class="seccion-proyectos" aria-labelledby="proyectos-titulo">
         <h2 class="h2" id="proyectos-titulo">Proyectos</h2>
         <p class="p">
-          Estos son algunos de los proyectos que he realizado, algunos
-          integramente, en otros, he tenido participación. Estos han sido creados
-          para clientes y otros son proyectos personales.
+          Aquí puedes ver una selección de mi trabajo, desde proyectos personales 
+          donde desarrollo ideas innovadoras, hasta soluciones comerciales para 
+          clientes reales. Cada proyecto representa un desafío único y demuestra 
+          mi capacidad para adaptarme a diferentes tecnologías y necesidades.
         </p>
 
         <!-- INICIO DE LOS PROYECTOS -->
@@ -241,13 +245,12 @@
           <section class="slider_body slider_body--show" data-id="1">
             <div class="slider_texts">
               <h2 class="subtitle">eCommerce</h2>
-              <p class="slider_review">
-                Plataforma eCommerce completa desarrollada con React y Material UI. 
-                Integra MercadoPago como pasarela de pagos, Firebase para autenticación 
-                y base de datos, y Formik para validación de formularios. 
-                <strong>Proyecto personal</strong> que demuestra habilidades full-stack 
-                y sirvió como base para proyectos comerciales posteriores.
-              </p>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> Desarrollo de plataforma eCommerce personal para demostrar habilidades full-stack y crear una base reutilizable para proyectos comerciales.</p>
+                <p class="project-solution"><strong>Solución:</strong> Plataforma completa con catálogo de productos, carrito de compras, sistema de pagos integrado y panel de administración.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, MercadoPago, Firebase, Formik, Yup.</p>
+                <p class="project-results"><strong>Resultados:</strong> Proyecto funcional que sirvió como base para proyectos comerciales posteriores, demostrando habilidades full-stack completas.</p>
+              </div>
               <span class="tag react">React</span>
               <span class="tag vite">Vite</span>
               <span class="tag mercado-pago">Mercado Pago</span>
@@ -264,20 +267,19 @@
 
             <figure class="slider_picture">
               <a href="https://e-commerce-v4.vercel.app/" target="_blank">
-                <img src="assets/eCommerce.png" class="slider_img" alt="Vista previa eCommerce desarrollado en React" loading="lazy" />
+                <img src="assets/eCommerce.webp" class="slider_img" alt="Vista previa eCommerce desarrollado en React" loading="lazy" />
               </a>
             </figure>
           </section>
           <section class="slider_body" data-id="2">
             <div class="slider_texts">
               <h2 class="subtitle">Sitio web de películas</h2>
-              <p class="slider_review">
-                Aplicación web para gestión de películas con sistema de autenticación 
-                y rutas protegidas. Permite agregar/eliminar películas, gestionar 
-                favoritos y ver detalles. <strong>Proyecto de práctica</strong> que 
-                demuestra el uso avanzado de hooks de React, Context API y 
-                autenticación JWT.
-              </p>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> Proyecto de práctica para dominar hooks avanzados de React, Context API y autenticación JWT.</p>
+                <p class="project-solution"><strong>Solución:</strong> Aplicación web completa con sistema de autenticación, rutas protegidas, gestión de películas y lista de favoritos.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, PostgreSQL, Context API, JWT, React Router.</p>
+                <p class="project-results"><strong>Resultados:</strong> Dominio completo de hooks avanzados, autenticación segura y arquitectura de aplicaciones React complejas.</p>
+              </div>
 
               <span class="tag react">React</span>
               <span class="tag vite">Vite</span>
@@ -296,21 +298,19 @@
             </div>
             <figure class="slider_picture">
               <a href="https://pelis-alpha.vercel.app" target="_blank">
-                <img src="assets/pelis.png" class="slider_img" alt="Vista previa del sitio web de películas" loading="lazy" />
+                <img src="assets/pelis.webp" class="slider_img" alt="Vista previa del sitio web de películas" loading="lazy" />
               </a>
             </figure>
           </section>
           <section class="slider_body" data-id="3">
             <div class="slider_texts">
               <h2 class="subtitle">Sitio web Touruguay</h2>
-              <p class="slider_review">
-                <strong>Proyecto académico</strong> desarrollado en equipo para la carrera 
-                Certified Tech Developer (Digital House, Mercado Libre, Globant). 
-                Plataforma de turismo con roles de usuario, reservas y gestión de 
-                destinos. Mi rol: <strong>Backend y DevOps</strong> con Java/Spring Boot, 
-                AWS, Docker y Ansible. Demuestra trabajo en equipo, metodologías ágiles 
-                y despliegue en la nube.
-              </p>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> Proyecto académico para la carrera Certified Tech Developer (Digital House, Mercado Libre, Globant) desarrollando una plataforma de turismo completa.</p>
+                <p class="project-solution"><strong>Solución:</strong> Plataforma con roles de usuario, sistema de reservas y gestión de destinos. Mi rol: Backend y DevOps con despliegue en la nube.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> Java, Spring Boot, React, MySQL, AWS, Docker, Ansible, Git, GitHub.</p>
+                <p class="project-results"><strong>Resultados:</strong> Proyecto funcional desplegado en la nube, demostrando trabajo en equipo, metodologías ágiles y habilidades DevOps completas.</p>
+              </div>
               <span class="tag java">JAVA</span>
               <span class="tag spring">Spring boot</span>
               <span class="tag react">React</span>
@@ -335,19 +335,19 @@
                 href="https://touruguay-front-production.up.railway.app"
                 target="_blank"
               >
-                <img src="assets/Touruguay.png" class="slider_img" alt="Vista previa del sitio web Touruguay" loading="lazy" />
+                <img src="assets/Touruguay.webp" class="slider_img" alt="Vista previa del sitio web Touruguay" loading="lazy" />
               </a>
             </figure>
           </section>
           <section class="slider_body" data-id="4">
             <div class="slider_texts">
               <h2 class="subtitle">Sitio web del Club Yerbalito</h2>
-              <p class="slider_review">
-                Sistema de gestión para club de baby fútbol en Treinta y Tres, Uruguay. 
-                Permite a los socios consultar el estado de sus pagos mensuales y 
-                a la administración gestionar cuotas. <strong>Proyecto para cliente real</strong> 
-                que resuelve una necesidad específica de la comunidad.
-              </p>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> El Club Yerbalito de baby fútbol necesitaba digitalizar la gestión de cuotas mensuales y lograr un mejor control en las suscripciones.</p>
+                <p class="project-solution"><strong>Solución:</strong> Sistema web con panel de administración para gestionar cuotas, consultar pagos pendientes y recabar información de los socios.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> React, Firebase, HTML, CSS.</p>
+                <p class="project-results"><strong>Resultados:</strong> Gestión digitalizada de cuotas, mejor comunicación con socios y reducción de trabajo administrativo manual.</p> 
+              </div>
               <span class="tag html">HTML</span>
               <span class="tag css">CSS</span>
               <span class="tag react">React</span>
@@ -355,39 +355,60 @@
             </div>
             <figure class="slider_picture">
               <a href="http://yerbalito.uy" target="_blank">
-                <img src="assets/yerbalito.png" class="slider_img" alt="Vista previa del sitio web del Club Yerbalito" loading="lazy" />
+                <img src="assets/yerbalito.webp" class="slider_img" alt="Vista previa del sitio web del Club Yerbalito" loading="lazy" />
               </a>
             </figure>
           </section>
-          <section class="slider_body" data-id="5">
+                    <section class="slider_body" data-id="5">
             <div class="slider_texts">
-              <h2 class="subtitle">EQM</h2>
-              <p class="slider_review">
-                Sistema integral de gestión para empresa de equipamiento médico. 
-                Controla stock, ventas, alquileres y facturación electrónica. 
-                <strong>Proyecto empresarial</strong> desarrollado en VB.NET con 
-                PostgreSQL, operativo desde hace 8 años. Demuestra experiencia 
-                en sistemas legacy y mantenimiento a largo plazo.
-              </p>
+              <h2 class="subtitle">EQM - SEPAE</h2>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> SEPAE (empresa de equipamiento médico) necesitaba gestionar stock, alquiler y venta de equipos médicos. Posteriormente se incorporó facturación electrónica.</p>
+                <p class="project-solution"><strong>Solución:</strong> Sistema integral de gestión desarrollado en VB.NET con PostgreSQL, operativo desde hace más de 8 años con mantenimiento continuo.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> VB.NET, PostgreSQL, e-Factura, sistemas legacy.</p>
+                <p class="project-results"><strong>Resultados:</strong> Sistema estable operativo por más de 8 años, gestión integral de operaciones y facturación electrónica implementada exitosamente.</p>
+              </div>
               <span class="tag vb-net">VB.net</span>
               <span class="tag postgresql">PostgreSQL</span>
               <span class="tag eFactura">e-Factura</span>
             </div>
             <figure class="slider_picture">
-              <img src="assets/eqm.png" class="slider_img" alt="Vista previa del sistema EQM" loading="lazy"/>
+              <img src="assets/eqm.webp" class="slider_img" alt="Vista previa del sistema EQM" loading="lazy"/>
             </figure>
           </section>
           
           <section class="slider_body" data-id="6">
             <div class="slider_texts">
+              <h2 class="subtitle">Nexo 360 - SEPAE</h2>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> SEPAE requiere modernizar y unificar todas sus herramientas en un sistema integral (CRM + ERP) para facilitar su día a día operativo.</p>
+                <p class="project-solution"><strong>Solución:</strong> Desarrollo de sistema moderno con arquitectura de microservicios, integrando todas las herramientas del cliente en una plataforma unificada.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> Spring Boot, React + Refine, PostgreSQL, GitHub Actions, Docker, Keycloak, ElasticSearch, Logstash, Kibana, Grafana, Prometheus, Kafka. Herramientas colaborativas: Notion, Jira, Confluence.</p>
+                <p class="project-results"><strong>Resultados:</strong> Proyecto en desarrollo activo con metodologías ágiles, implementando stack tecnológico moderno y arquitectura escalable.</p>
+              </div>
+              <span class="tag spring-boot">Spring Boot</span>
+              <span class="tag react">React</span>
+              <span class="tag postgresql">PostgreSQL</span>
+              <span class="tag docker">Docker</span>
+              <span class="tag elasticsearch">ElasticSearch</span>
+              <span class="tag kafka">Kafka</span>
+              <span class="tag jira">Jira</span>
+              <span class="tag notion">Notion</span>
+            </div>
+            <figure class="slider_picture">
+              <img src="assets/nexo360.webp" class="slider_img" alt="Vista previa del proyecto Nexo 360" loading="lazy"/>
+            </figure>
+          </section>
+          
+          <section class="slider_body" data-id="7">
+            <div class="slider_texts">
               <h2 class="subtitle">Kuka Store</h2>
-              <p class="slider_review">
-                <strong>Proyecto comercial real</strong> para tienda online de vestimenta 
-                para jóvenes. Plataforma eCommerce completa con catálogo de productos, 
-                carrito de compras, sistema de pagos y panel de administración. 
-                Desarrollado con React, Material UI y MercadoPago. 
-                <strong>Cliente real</strong> con tienda operativa.
-              </p>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> Tienda de vestimenta para jóvenes necesitaba expandirse al canal online y automatizar procesos de venta.</p>
+                <p class="project-solution"><strong>Solución:</strong> Plataforma eCommerce completa con catálogo de productos, carrito de compras, sistema de pagos y panel de administración.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, MercadoPago, Firebase, Formik, Yup.</p>
+                <p class="project-results"><strong>Resultados:</strong> Tienda online operativa, aumento de alcance de clientes y automatización completa del proceso de ventas.</p>
+              </div>
               <span class="tag react">React</span>
               <span class="tag material-ui">Material UI</span>
               <span class="tag mercado-pago">Mercado Pago</span>
@@ -398,21 +419,20 @@
             </div>
             <figure class="slider_picture">
               <a href="https://www.kukastore.com.uy" target="_blank">
-                <img src="assets/kukastore.png" class="slider_img" alt="Vista previa de Kuka Store" loading="lazy" />
+                <img src="assets/kukastore.webp" class="slider_img" alt="Vista previa de Kuka Store" loading="lazy" />
               </a>
             </figure>
           </section>
           
-          <section class="slider_body" data-id="7">
+          <section class="slider_body" data-id="8">
             <div class="slider_texts">
               <h2 class="subtitle">India Cueros</h2>
-              <p class="slider_review">
-                <strong>Proyecto comercial real</strong> para negocio de venta de 
-                artesanías y artículos en cuero. Sitio web corporativo con catálogo 
-                de productos, información del negocio y formulario de contacto. 
-                Diseño responsive y optimizado para SEO. <strong>Cliente real</strong> 
-                con presencia online establecida.
-              </p>
+              <div class="project-details">
+                <p class="project-context"><strong>Contexto:</strong> Negocio de artesanías y artículos en cuero necesitaba establecer presencia online y mostrar su catálogo de productos.</p>
+                <p class="project-solution"><strong>Solución:</strong> Sitio web corporativo con catálogo de productos, información del negocio, formulario de contacto y optimización SEO.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, Firebase, Formik, Yup, SEO.</p>
+                <p class="project-results"><strong>Resultados:</strong> Presencia online establecida, mejor visibilidad en buscadores y canal de contacto directo con clientes.</p>
+              </div>
               <span class="tag react">React</span>
               <span class="tag material-ui">Material UI</span>
               <span class="tag firebase">Firebase</span>
@@ -423,7 +443,7 @@
             </div>
             <figure class="slider_picture">
               <a href="https://www.indiacueros.com.uy" target="_blank">
-                <img src="assets/indiacueros.png" class="slider_img" alt="Vista previa de India Cueros" loading="lazy" />
+                <img src="assets/indiacueros.webp" class="slider_img" alt="Vista previa de India Cueros" loading="lazy" />
               </a>
             </figure>
           </section>
@@ -458,6 +478,7 @@
                   width="40"
                   height="40"
                   aria-hidden="true"
+                  loading="lazy"
                 />
               </a>
             </li>
@@ -476,6 +497,7 @@
                   width="40"
                   height="40"
                   aria-hidden="true"
+                  loading="lazy"
                 />
               </a>
             </li>
@@ -657,6 +679,44 @@
                 />
               </a>
             </li>
+            <li class="li">
+              <a
+                class="a"
+                title="firebase"
+                href="https://firebase.google.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                  alt="firebase"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="vercel"
+                href="https://vercel.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg"
+                  alt="vercel"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </a>
+            </li>
           </div>
           <!-- tecnologias -->
           <div class="columna">
@@ -713,6 +773,87 @@
                   width="40"
                   height="40"
                   aria-hidden="true"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="github"
+                href="https://github.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                  alt="github"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </div>
+          <!-- herramientas de gestión -->
+          <div class="columna">
+            <h3 class="h3">Gestión de Proyectos</h3>
+            <li class="li">
+              <a
+                class="a"
+                title="jira"
+                href="https://www.atlassian.com/software/jira"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://cdn.worldvectorlogo.com/logos/jira-1.svg"
+                  alt="jira"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="trello"
+                href="https://trello.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://www.vectorlogo.zone/logos/trello/trello-icon.svg"
+                  alt="trello"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="notion"
+                href="https://www.notion.so/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="svg"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
+                  alt="notion"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                  loading="lazy"
                 />
               </a>
             </li>
@@ -765,34 +906,24 @@
         
         <div class="about-content">
           <div class="about-story">
-            <h3 class="about-subtitle">Mi Historia</h3>
             <p class="p">
-              👋 ¡Hola! Soy Michael, un desarrollador apasionado por crear soluciones digitales que marquen la diferencia. 
-              Mi viaje en la programación comenzó hace más de 10 años, cuando desarrollé mi primer proyecto: 
-              <strong>el juego de la mosqueta con Turbo Pascal</strong> 🎮
+              👋 ¡Hola! Soy Michael, un desarrollador apasionado por crear soluciones digitales que 
+              generan impacto real en las personas y sus negocios. Mi camino en la programación comenzó 
+              hace más de 10 años, cuando desarrollé mi primer proyecto: el juego de la mosqueta en 
+              Turbo Pascal 🎮. Aunque durante años trabajé como técnico en telecomunicaciones, 
+              la programación siempre fue mi motor.
             </p>
+            
             <p class="p">
-              Aunque durante años trabajé como técnico en telecomunicaciones, la programación siempre fue mi pasión secreta. 
-              Hace poco tiempo decidí dar el salto y convertirme en desarrollador full-stack, especializándome en 
-              <strong>React, Java, Spring Boot</strong> y tecnologías modernas.
+              Hoy me desempeño como <strong>desarrollador full stack</strong>, con experiencia en React, 
+              Node.js, Java y Spring Boot. Me gusta construir aplicaciones escalables, con código limpio 
+              y orientado a buenas prácticas, siempre con foco en ofrecer la mejor experiencia al usuario.
             </p>
-          </div>
-
-          <div class="about-approach">
-            <h3 class="about-subtitle">Mi Enfoque</h3>
+            
             <p class="p">
-              Creo en el <strong>desarrollo ágil</strong> y la <strong>colaboración efectiva</strong>. 
-              Me especializo en crear aplicaciones escalables, con código limpio y documentado. 
-              Siempre busco aprender nuevas tecnologías y metodologías para entregar la mejor experiencia al usuario.
-            </p>
-          </div>
-
-          <div class="about-availability">
-            <h3 class="about-subtitle">Disponibilidad</h3>
-            <p class="p">
-              Actualmente estoy disponible para <strong>proyectos independientes</strong> y 
-              <strong>posiciones remotas</strong>. Me adapto rápidamente a nuevos equipos y 
-              tecnologías, y estoy siempre dispuesto a enfrentar nuevos desafíos.
+              Actualmente estoy disponible para colaborar en <strong>proyectos independientes</strong> o 
+              posiciones <strong>remotas</strong>. Trabajo bien en equipo, aprendo rápido nuevas tecnologías 
+              y me enfoco en entregar resultados de calidad.
             </p>
           </div>
         </div>

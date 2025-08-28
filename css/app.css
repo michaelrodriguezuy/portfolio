@@ -169,6 +169,26 @@ img {
   display: block;
   object-fit: cover;
   object-position: center center;
+  /* Optimización de imágenes */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Optimización específica para imágenes de proyectos */
+.slider_img {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Optimización para iconos SVG */
+.svg {
+  filter: drop-shadow(0 0 0 transparent);
+  transition: filter 0.3s ease;
+}
+
+.svg:hover {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 li {
   list-style-type: none;
@@ -406,6 +426,15 @@ li {
 .tailwind { background-color: #0db7ed; color: #ffffffc2; }  
 .postman { background-color: #7952b3; color: #ffffffc2; }
 .seo { background-color: #ff6b35; color: #ffffffc2; }
+.firebase { background-color: #ffca28; color: #3d3b3b; }
+.vercel { background-color: #000000; color: #ffffffc2; }
+.jira { background-color: #0052cc; color: #ffffffc2; }
+.trello { background-color: #0079bf; color: #ffffffc2; }
+.notion { background-color: #000000; color: #ffffffc2; }
+.spring-boot { background-color: #6db33f; color: #ffffffc2; }
+.docker { background-color: #2496ed; color: #ffffffc2; }
+.elasticsearch { background-color: #f5f5f5; color: #3d3b3b; }
+.kafka { background-color: #231f20; color: #ffffffc2; }
 
 
 .h2 {
@@ -513,6 +542,51 @@ li {
   font-size: 20px;
   line-height: 1.7;
 }
+
+/* Estilos para el nuevo formato de proyectos */
+.project-details {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.project-details p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--blanco);
+}
+
+.project-context {
+  border-left: 3px solid var(--texto-sky);
+  padding-left: 15px;
+  background: rgba(85, 138, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.project-solution {
+  border-left: 3px solid #4CAF50;
+  padding-left: 15px;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.project-tech {
+  border-left: 3px solid #FF9800;
+  padding-left: 15px;
+  background: rgba(255, 152, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.project-results {
+  border-left: 3px solid #9C27B0;
+  padding-left: 15px;
+  background: rgba(156, 39, 176, 0.1);
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+}
 .slider_arrow {
   cursor: pointer;
   width: 90%;
@@ -561,9 +635,7 @@ li {
   margin: 0 auto;
 }
 
-.about-story,
-.about-approach,
-.about-availability {
+.about-story {
   margin-bottom: var(--espaciado-lg);
   padding: var(--espaciado-md);
   background: rgba(255, 255, 255, 0.05);
