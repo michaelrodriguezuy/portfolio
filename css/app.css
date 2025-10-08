@@ -1355,8 +1355,9 @@ li {
   .contacto-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0;
-    max-width: 100%;
+    padding: 0 1rem;
+    max-width: 100% !important;
+    width: 100% !important;
     justify-items: stretch;
     margin: 0;
   }
@@ -1404,14 +1405,15 @@ li {
   }
   
   .contacto-formulario {
-    width: 100%;
+    width: 100% !important;
     margin: 0;
     padding: 0;
   }
   
   .formulario {
     gap: 1rem;
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .form-group {
@@ -1422,7 +1424,9 @@ li {
   .form-group textarea {
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
-    width: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box;
   }
   
@@ -1438,6 +1442,21 @@ li {
 @media (max-width: 480px) {
   .contacto {
     padding: 1rem 0.5rem;
+  }
+  
+  .contacto-content {
+    padding: 0 0.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .btn-enviar {
+    width: 100% !important;
   }
   
   .contacto .h2 {
