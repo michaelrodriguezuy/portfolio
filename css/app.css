@@ -79,6 +79,31 @@ td {
 
 html {
   scroll-behavior: smooth;
+  /* Prevenir scroll bounce en iOS */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  /* Prevenir scroll bounce */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reglas específicas para iOS - Solo overscroll */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .main {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Scroll suave para navegación */
+a[href^="#"] {
+  scroll-behavior: smooth;
 }
 
 /* Animaciones mejoradas */
@@ -252,15 +277,18 @@ li {
 .header {
   width: 100%;
   min-height: 5em;
-
   padding: 1em 2em;
-
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* Header completamente transparente - sin franja visible */
+  background: none;
+  backdrop-filter: none;
 }
 
 .header .ul {
@@ -268,18 +296,101 @@ li {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0.3em;
 }
 
 .header .li {
-  margin: 0 1em;
+  margin: 0 0.2em;
+}
+
+/* Logo en el header */
+.header .logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  /* Mejorar calidad de imagen - enfoque diferente */
+  image-rendering: auto;
+  image-rendering: smooth;
+  /* Suavizar y mejorar calidad */
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+  /* Evitar pixelado */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.header .logo:hover {
+  transform: scale(1.05) translateZ(0);
+  filter: contrast(1.2) brightness(1.1) saturate(1.2);
+}
+
+/* Enlaces del header en mayúsculas */
+.header .a {
+  color: var(--blanco);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header .a:hover {
+  color: var(--texto-sky);
+}
+
+/* Línea sutil debajo en hover - excluir logo */
+.header .a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--texto-sky);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.header .a:hover::after {
+  width: 80%;
+}
+
+/* Excluir logo del efecto de línea */
+.header .a:has(.logo)::after {
+  display: none;
 }
 
 .main {
   background-color: var(--negro-7);
-  margin: 0 0 1em;
+  margin: 0;
   text-align: center;
   position: relative;
   z-index: 2;
+  /* Compensar header absoluto */
+  padding-top: 5em;
+  overflow-x: hidden;
+  /* Prevenir scroll bounce */
+  overscroll-behavior: none;
+}
+
+/* Override para sección contacto */
+.contacto {
+  text-align: left;
+}
+
+.contacto .p {
+  text-align: left !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+/* Forzar alineación izquierda en toda la sección contacto */
+.contacto * {
+  text-align: left !important;
 }
 .main .p {
   margin: 30px 60px;
@@ -295,6 +406,8 @@ li {
   justify-content: center;
   align-items: center;
   font-family: var(--tipo-principal);
+  /* Prevenir scroll bounce */
+  overscroll-behavior: none;
 }
 
 .seccion .info {
@@ -686,11 +799,38 @@ li {
 }
 
 .footer {
-  padding: 2em 0;
+  padding: 2rem 1rem;
   text-align: center;
-
   position: relative;
   z-index: 2;
+  /* Footer con fondo del main */
+  background-color: var(--negro-7);
+}
+
+.scroll-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--blanco);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--texto-sky);
+  color: var(--blanco);
+  transform: translateY(-3px);
+  border-color: var(--texto-sky);
+}
+
+.scroll-to-top svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Botón flotante de WhatsApp */
@@ -878,4 +1018,484 @@ li {
     font-size: 1rem;
     line-height: 1.6;
   }
+
+  /* Header responsive para mobile */
+  .header {
+    padding: 0.5em 1em;
+    min-height: 3em;
+  }
+  
+  .header .logo {
+    width: 35px;
+    height: 35px;
+    filter: contrast(1.15) brightness(1.1) saturate(1.1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .header .a {
+    font-size: 0.75rem;
+    padding: 0.3em 0.6em;
+  }
+  
+  .header .ul {
+    gap: 0.3em;
+  }
+  
+  .header .li {
+    margin: 0 0.2em;
+  }
+}
+
+/* ===== SECCIÓN CV ===== */
+.cv-section {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cv-text {
+  margin-bottom: 1rem !important;
+  font-size: 1.1rem;
+}
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--texto-sky);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-family: var(--tipo-alternativo);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.cv-download:hover {
+  background-color: var(--blanco);
+  color: var(--texto-sky);
+  transform: translateY(-2px);
+}
+
+.cv-icon {
+  fill: currentColor;
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+
+.contacto {
+  animation: fadeInUp 1s ease-out;
+}
+
+.contacto .h2 {
+  margin-bottom: 2rem;
+}
+
+.contacto-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+  justify-items: start;
+}
+
+.contacto-texto {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contacto-formulario {
+  text-align: left;
+  width: 100%;
+  max-width: none;
+}
+
+.contacto-texto .p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contacto-texto a {
+  color: var(--texto-sky);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contacto-texto a:hover {
+  color: var(--blanco);
+  text-decoration: underline;
+}
+
+/* Formulario de contacto */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-family: var(--tipo-principal);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  min-width: 500px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--texto-sky);
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-family: var(--tipo-alternativo);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 1 !important;
+  font-size: 0.9rem;
+}
+
+/* Asegurar que el texto del usuario sea visible */
+.form-group input:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+  color: #000 !important;
+  font-weight: 500;
+}
+
+.btn-enviar {
+  padding: 1rem 2rem;
+  background-color: var(--texto-sky);
+  color: var(--blanco);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--tipo-alternativo);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-enviar:hover {
+  background-color: var(--blanco);
+  color: var(--texto-sky);
+  transform: translateY(-2px);
+}
+
+/* Redes sociales inline */
+.contacto-redes-inline {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.contacto-redes-inline a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--blanco);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  outline: none;
+}
+
+.contacto-redes-inline a svg,
+.contacto-redes-inline a i {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.contacto-redes-inline a:hover {
+  background-color: var(--texto-sky);
+  color: var(--blanco);
+  transform: translateY(-2px);
+}
+
+.contacto-redes-inline a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.contacto-redes-inline a:active {
+  outline: none;
+  text-decoration: none;
+}
+
+/* Icono de WhatsApp con colores acordes */
+.contacto-redes-inline .fab.fa-whatsapp {
+  color: var(--blanco);
+  font-size: 1.2rem;
+}
+
+.contacto-redes-inline a:hover .fab.fa-whatsapp {
+  color: var(--blanco);
+}
+
+/* Responsive para contacto - Pantallas medianas */
+@media (min-width: 900px) {
+  .contacto-content {
+    max-width: 1500px;
+    gap: 2.5rem;
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+/* Responsive para contacto - Pantallas grandes */
+@media (min-width: 1200px) {
+  .contacto-content {
+    max-width: 1600px;
+    gap: 3rem;
+    grid-template-columns: 400px 1fr;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    min-width: 600px;
+  }
+  
+  .btn-enviar {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .contacto-texto .p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive para contacto - Pantallas extra grandes */
+@media (min-width: 1400px) {
+  .form-group input,
+  .form-group textarea {
+    min-width: 700px;
+  }
+}
+
+/* Estilos para mensajes del formulario */
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+}
+
+.form-message-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.form-message-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+/* Responsive para contacto - Mobile */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .contacto-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+    max-width: 100%;
+    justify-items: stretch;
+    margin: 0;
+  }
+  
+  .contacto-texto {
+    text-align: left !important;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contacto-texto .p {
+    text-align: left !important;
+    margin: 0 0 1.5rem 0 !important;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .contacto-texto .p a {
+    text-align: left !important;
+    display: inline-block;
+  }
+  
+  .contacto-redes-inline {
+    justify-content: flex-start !important;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contacto-redes-inline a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .contacto-redes-inline a svg,
+  .contacto-redes-inline a i {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+  }
+  
+  .contacto-formulario {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .formulario {
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .btn-enviar {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile muy pequeño */
+@media (max-width: 480px) {
+  .contacto {
+    padding: 1rem 0.5rem;
+  }
+  
+  .contacto .h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contacto-texto .p {
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0 !important;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .btn-enviar {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mensajes del formulario */
+.form-message {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+  font-family: var(--tipo-principal);
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-message-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.form-message-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.form-message-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
