@@ -1,45 +1,44 @@
-(function(){    
-    const sliders = [...document.querySelectorAll('.slider_body') ];
+// Carrusel simple - solo muestra/oculta proyectos
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Inicializando carrusel simple...');
     
-    const arrowNext = document.querySelector('#next');
-    const arrowBefore = document.querySelector('#before');
-
-    let value;
-
-    // Verificar que tenemos sliders y flechas
-    if (sliders.length === 0 || !arrowNext || !arrowBefore) {
-        console.error('Slider: No se encontraron elementos necesarios');
-        return;
-    }
-
-    console.log(`Slider: Se encontraron ${sliders.length} proyectos`);
-
-    arrowNext.addEventListener('click', () => changePosition(1));
-    arrowBefore.addEventListener('click', () => changePosition(-1));
-
-    function changePosition(change){
-        const currentElement = Number(document.querySelector('.slider_body--show').dataset.id);
-
-        value = currentElement;
-        value += change;
-
-        if(value === 0 || value === sliders.length + 1){
-            value = value === 0 ? sliders.length : 1;
+    const projects = document.querySelectorAll('.slider_body');
+    const nextBtn = document.querySelector('#next');
+    const prevBtn = document.querySelector('#before');
+    
+    let currentIndex = 0;
+    
+    console.log(`Encontrados ${projects.length} proyectos`);
+    
+    function showProject(index) {
+        // Ocultar todos
+        projects.forEach(project => {
+            project.classList.remove('slider_body--show');
+        });
+        
+        // Mostrar el actual
+        if (projects[index]) {
+            projects[index].classList.add('slider_body--show');
+            console.log(`Mostrando proyecto ${index + 1}: ${projects[index].querySelector('.subtitle').textContent}`);
         }
-
-        // Remover clase de todos los sliders
-        sliders.forEach(slider => slider.classList.remove('slider_body--show'));
-        
-        // Agregar clase al slider actual
-        sliders[value-1].classList.add('slider_body--show');
-        
-        console.log(`Slider: Mostrando proyecto ${value} de ${sliders.length}`);
     }
-
-    // Inicializar el slider mostrando el primer proyecto
-    if (sliders.length > 0) {
-        sliders.forEach(slider => slider.classList.remove('slider_body--show'));
-        sliders[0].classList.add('slider_body--show');
-        console.log('Slider: Inicializado correctamente');
+    
+    function nextProject() {
+        currentIndex = (currentIndex + 1) % projects.length;
+        showProject(currentIndex);
     }
-})();
+    
+    function prevProject() {
+        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+        showProject(currentIndex);
+    }
+    
+    // Event listeners
+    if (nextBtn) nextBtn.addEventListener('click', nextProject);
+    if (prevBtn) prevBtn.addEventListener('click', prevProject);
+    
+    // Mostrar el primer proyecto
+    showProject(0);
+    
+    console.log('Carrusel inicializado correctamente');
+});
