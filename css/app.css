@@ -498,10 +498,18 @@ li {
 .tag {
   display: inline-block;
   margin-right: 5px;
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: bold;
+}
+
+/* Aumentar contraste / visibilidad de las etiquetas sobre fondos oscuros y overlays */
+.tag {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 5;
 }
 
 
@@ -550,6 +558,10 @@ li {
 .kafka { background-color: #231f20; color: #ffffffc2; }
 .keycloak { background-color: #7c4dff; color: #ffffffc2; }
 .nodejs { background-color: #339933; color: #ffffffc2; }
+.express { background-color: #000000; color: #ffffffc2; }
+.elasticsearch { background-color: #ba8f8f; color: #3d3b3b; }
+.confluence { background-color: #333c4d; color: #ffffffc2; }
+
 
 
 .h2 {
@@ -578,34 +590,35 @@ li {
   min-height: 80vh;
   max-width: 1200px;
   margin: 0 auto; /* para centrar el contenedor*/
-  overflow: hidden;
+  overflow: visible; /* permitir que se expanda verticalmente si un slide es más alto */
 }
 .slider_container {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  height: 500px;
-  overflow: hidden;
+  min-height: 500px;
+  height: auto;
+  overflow: visible; /* permitir que textos largos no queden cortados */
   padding: 0 60px;
 }
 
 
 .slider_body {
   display: none;
-  grid-template-columns: 1fr max-content;
-  align-items: center;
-  gap: 2rem;
-  height: 500px;
+  grid-template-columns: 1fr 400px; /* ancho fijo para la columna de imagen */
+  align-items: center; /* centrar verticalmente el contenido */
+  gap: 3rem; /* más espacio entre texto e imagen */
+  min-height: 500px;
+  height: auto;
   width: 100%;
+  max-width: 1200px; /* limitar ancho máximo para mejor legibilidad */
+  margin: 0 auto; /* centrar horizontalmente */
 }
 
 .slider_body--show {
   display: grid;
 }
-
-
-
-
 
 .slider_img {
   width: 400px;
@@ -649,16 +662,115 @@ li {
 }
 
 .slider_texts {
-  max-width: 600px;
+  max-width: 100%; /* permitir que use todo el espacio disponible */
+  padding-right: 1rem; /* espacio para evitar que el texto toque el borde */
 }
 .subtitle {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  text-align: left; /* alinear títulos a la izquierda */
 }
 .slider_review {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.7;
+  text-align: left; /* alinear texto a la izquierda */
+}
+
+/* Estilos para el nuevo formato de servicios */
+.servicios {
+  padding: var(--espaciado-xl) 2rem;
+}
+
+.servicios-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.servicio-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  border-left: 4px solid var(--texto-sky);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.servicio-icono {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.servicio-titulo {
+  font-family: var(--tipo-alternativo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--blanco);
+  margin-bottom: 1rem;
+}
+
+.servicio-descripcion {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--blanco);
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.servicio-ejemplo {
+  font-size: 1rem;
+  color: var(--gris-f);
+  font-style: italic;
+  margin: 0;
+}
+
+.servicios-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.servicios-cta p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blanco);
+  margin-bottom: 1.5rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--texto-sky);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-family: var(--tipo-alternativo);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--blanco);
+  color: var(--texto-sky);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(85, 138, 255, 0.3);
 }
 
 /* Estilos para el nuevo formato de proyectos */
@@ -1002,6 +1114,10 @@ li {
   }
   .slider_picture {
     grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   .slider_img {
@@ -1062,6 +1178,51 @@ li {
   .header .li {
     margin: 0 0.2em;
   }
+}
+
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--border-radius);
+}
+
+.metrica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.metrica:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.metrica-numero {
+  font-family: var(--tipo-alternativo);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--texto-sky);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.metrica-label {
+  font-family: var(--tipo-principal);
+  font-size: 1rem;
+  color: var(--gris-f);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
 }
 
 /* ===== SECCIÓN CV ===== */
@@ -1229,6 +1390,42 @@ li {
 .contacto-texto a:hover {
   color: var(--blanco);
   text-decoration: underline;
+}
+
+.contacto-cta {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--texto-sky);
+  text-align: center;
+}
+
+.contacto-cta h3 {
+  font-family: var(--tipo-alternativo);
+  font-size: 2rem;
+  color: var(--texto-sky);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contacto-cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--blanco);
+  margin: 0 0 1rem;
+}
+
+.contacto-cta p:last-child {
+  margin-bottom: 0;
+}
+
+.respuesta-rapida {
+  font-size: 1rem !important;
+  color: var(--gris-f) !important;
+  font-weight: 500;
+  margin-bottom: 1rem !important;
 }
 
 /* Formulario de contacto */
@@ -1499,6 +1696,19 @@ li {
     padding: 0;
   }
   
+  .contacto-cta {
+    padding: 1.5rem 1rem;
+    margin: 0 1rem 2rem;
+  }
+  
+  .contacto-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contacto-cta p {
+    font-size: 1rem;
+  }
+
   .formulario {
     gap: 1rem;
     width: 100% !important;
@@ -1524,6 +1734,50 @@ li {
     font-size: 0.9rem;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .servicios {
+    padding: var(--espaciado-md) 1rem;
+  }
+  
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .servicio-card {
+    padding: 1.5rem;
+  }
+  
+  .servicio-icono {
+    font-size: 2.5rem;
+  }
+  
+  .servicio-titulo {
+    font-size: 1.3rem;
+  }
+  
+  .servicios-cta p {
+    font-size: 1.1rem;
+  }
+
+  .metricas {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+  }
+  
+  .metrica {
+    padding: 1rem;
+  }
+  
+  .metrica-numero {
+    font-size: 2.5rem;
+  }
+  
+  .metrica-label {
+    font-size: 0.9rem;
   }
 }
 

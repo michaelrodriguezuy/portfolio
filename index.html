@@ -155,6 +155,9 @@
             <a href="#inicio" title="Inicio" class="a">INICIO</a>
           </li>
           <li class="li">
+            <a href="#servicios" title="Servicios" class="a">SERVICIOS</a>
+          </li>
+          <li class="li">
             <a href="#proyectos" title="Portfolio" class="a">PORTFOLIO</a>
           </li>
           <li class="li">
@@ -181,9 +184,61 @@
             <h1 class="hero-name">MICHAEL RODRÍGUEZ</h1>
             <div class="hero-line"></div>
             <p class="hero-title">Full stack developer</p>
+         
+
           </div>
         </div>
       </section>
+
+      <section class="seccion servicios" id="servicios">
+  <h2 class="h2">Servicios</h2>
+  <p class="p servicios-intro">
+    Desarrollo software a medida y automatizaciones para pequeñas y medianas empresas.
+  </p>
+  
+  <div class="servicios-grid">
+    <div class="servicio-card">
+      <div class="servicio-icono">⚙️</div>
+      <h3 class="servicio-titulo">Automatizaciones</h3>
+      <p class="servicio-descripcion">
+        Automatizo procesos repetitivos: integración de sistemas, reportes automáticos, 
+        sincronización de datos y notificaciones.
+      </p>
+      <p class="servicio-ejemplo">
+        <strong>Ej:</strong> Conectar ventas con contabilidad para registro automático de facturas.
+      </p>
+    </div>
+    
+    <div class="servicio-card">
+      <div class="servicio-icono">💻</div>
+      <h3 class="servicio-titulo">Aplicaciones Web</h3>
+      <p class="servicio-descripcion">
+        Sistemas completos: gestión de clientes, inventario, facturación y reportes. 
+        Soluciones escalables con React, Node.js y PostgreSQL.
+      </p>
+      <p class="servicio-ejemplo">
+        <strong>Ej:</strong> Sistema de gestión que reemplace planillas Excel por una plataforma profesional.
+      </p>
+    </div>
+    
+    <div class="servicio-card">
+      <div class="servicio-icono">🔧</div>
+      <h3 class="servicio-titulo">Mantenimiento & Soporte</h3>
+      <p class="servicio-descripcion">
+        Mantenimiento de sistemas existentes, actualizaciones, corrección de bugs 
+        y soporte técnico continuo para sistemas legacy y modernos.
+      </p>
+      <p class="servicio-ejemplo">
+        <strong>Ej:</strong> Mantener tu sistema actual y agregar funcionalidades según tu negocio crece.
+      </p>
+    </div>
+  </div>
+  
+  <div class="servicios-cta">
+    <p>¿Tenés procesos que te hacen perder tiempo?</p>
+    <a href="#contacto" class="btn-cta">Hablemos de tu proyecto</a>
+  </div>
+</section>
 
       <section id="proyectos" class="seccion-proyectos" aria-labelledby="proyectos-titulo">
         <h2 class="h2" id="proyectos-titulo">Portfolio</h2>
@@ -298,18 +353,38 @@
           </section>
           <section class="slider_body" data-id="4">
             <div class="slider_texts">
-              <h2 class="subtitle">Sitio web del Club Yerbalito</h2>
+              <h2 class="subtitle">Club Yerbalito | Sistema de Gestión Deportiva</h2>
               <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> El Club Yerbalito de baby fútbol necesitaba digitalizar la gestión de cuotas mensuales y lograr un mejor control en las suscripciones.</p>
-                <p class="project-solution"><strong>Solución:</strong> Sistema web con panel de administración para gestionar cuotas, consultar pagos pendientes y recabar información de los socios.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> React para interfaz de usuario, Firebase para autenticación y base de datos, HTML/CSS para estructura y estilos.</p>
-                <p class="project-results"><strong>Resultados:</strong> Gestión digitalizada de cuotas, mejor comunicación con socios y reducción de trabajo administrativo manual.</p> 
-              </div>
-                                              <span class="tag react">React</span>
-                <span class="tag firebase">Firebase</span>
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
-            </div>
+                <p class="project-context"><strong>Contexto:</strong> Club de baby fútbol con 160+ jugadores en 11 categorías 
+    gestionaba cuotas manualmente con planillas Excel, generando errores, pagos duplicados 
+    y pérdida de tiempo administrativo. Necesitaban una solución integral que digitalizara 
+    todo el proceso.</p>
+                <p class="project-solution"><strong>Solución:</strong> Sistema web completo con gestión de jugadores, pagos mensuales 
+    automáticos, generación de comprobantes PDF, reportes anuales, fixture de partidos y blog 
+    de noticias. Incluye sistema de hermanos con pagos compartidos y notificaciones de cumpleaños.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> React + Vite para frontend, Node.js + Express para backend, 
+    MySQL para base de datos, Material-UI + Tailwind para UI, Docker para despliegue. 
+    Arquitectura full-stack con autenticación, validaciones avanzadas y generación de PDFs.</p>
+
+                
+
+                <p class="project-results"><strong>Resultados:</strong> Sistema operativo hace 8+ años con actualizaciones continuas. 
+    Reducción del 90% en tiempo administrativo, eliminación de errores de cobro, comprobantes 
+    automáticos por WhatsApp/Email. Actualmente gestiona 160+ jugadores activos y 1000+ recibos 
+    anuales. <strong>Proyecto real en producción mantenido desde 2016.</strong></p> 
+</div>
+                
+
+        <span class="tag react">React</span>
+        <span class="tag nodejs">Node.js</span>
+        <span class="tag express">Express</span>
+        <span class="tag mysql">MySQL</span>
+        <span class="tag material-ui">Material UI</span>
+        <span class="tag tailwind">Tailwind</span>
+        <span class="tag docker">Docker</span>
+      
+    </div>
+  
             <figure class="slider_picture">
               <a href="http://yerbalito.uy" target="_blank">
                 <img src="assets/yerbalito.webp" class="slider_img" alt="Vista previa del sitio web del Club Yerbalito" loading="lazy" />
@@ -318,7 +393,7 @@
           </section>
           <section class="slider_body" data-id="5">
             <div class="slider_texts">
-              <h2 class="subtitle">EQM - SEPAE</h2>
+              <h2 class="subtitle">EQM | SEPAE</h2>
               <div class="project-details">
                 <p class="project-context"><strong>Contexto:</strong> SEPAE (empresa de equipamiento médico) necesitaba gestionar stock, alquiler y venta de equipos médicos. Posteriormente se incorporó facturación electrónica.</p>
                 <p class="project-solution"><strong>Solución:</strong> Sistema integral de gestión desarrollado en VB.NET con PostgreSQL, operativo desde hace más de 8 años con mantenimiento continuo.</p>
@@ -336,23 +411,42 @@
           
           <section class="slider_body" data-id="6">
             <div class="slider_texts">
-              <h2 class="subtitle">Nexo 360 - SEPAE</h2>
+              <h2 class="subtitle">Nexo 360 | ERP/CRM para Servicios Médicos | SEPAE</h2>
               <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> SEPAE requiere modernizar y unificar todas sus herramientas en un sistema integral (CRM + ERP) para facilitar su día a día operativo.</p>
-                <p class="project-solution"><strong>Solución:</strong> Desarrollo de sistema moderno con arquitectura de microservicios, integrando todas las herramientas del cliente en una plataforma unificada.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> Spring Boot para microservicios, React + Refine para frontend, Keycloak para autenticación y autorización, Docker para containerización, ELK Stack para observabilidad, Kafka para eventos, GitHub Actions para CI/CD. Herramientas colaborativas: Notion, Jira, Confluence.</p>
-                <p class="project-results"><strong>Resultados:</strong> Proyecto en desarrollo activo con metodologías ágiles, implementando stack tecnológico moderno y arquitectura escalable.</p>
-              </div>
-              <span class="tag spring-boot">Spring Boot</span>
-              <span class="tag react">React</span>
-              <span class="tag postgresql">PostgreSQL</span>
-              <span class="tag keycloak">Keycloak</span>
-              <span class="tag docker">Docker</span>
-              <span class="tag elasticsearch">ElasticSearch</span>
-              <span class="tag kafka">Kafka</span>
-              <span class="tag jira">Jira</span>
-              <span class="tag notion">Notion</span>
-            </div>
+                <p class="project-context"><strong>Contexto:</strong> Empresa de equipamiento médico y servicios de acompañamiento 
+    con 2 sistemas legacy separados (10+ años de data): EQM (equipos médicos, 20k+ facturas) 
+    y GISA (gestión de acompañantes, 3k+ socios). Operaban con procesos manuales duplicados, 
+    datos inconsistentes y falta de integración entre sistemas.</p>
+                <p class="project-solution"><strong>Solución:</strong> Sistema integral moderno (ERP + CRM) con arquitectura de 
+    microservicios que unifica ambos sistemas legacy. Incluye gestión de clientes/socios, 
+    inventario de equipos médicos, servicios de acompañamiento, facturación electrónica, 
+    reportes analíticos y dashboard ejecutivo. Migración e integración de 2 bases de datos 
+    PostgreSQL con resolución de datos duplicados.</p>
+                <p class="project-tech"><strong>Tecnologías:</strong> Spring Boot (microservicios), React + Refine (frontend), 
+    Keycloak (autenticación OAuth2), Docker + Docker Compose (infraestructura), PostgreSQL, 
+    Kafka (eventos), ELK Stack (observabilidad), GitHub Actions (CI/CD). Herramientas: 
+    Jira, Confluence, Notion. Metodologías ágiles con sprints de 2 semanas.   </p>
+
+                <p class="project-results"><strong>Resultados:</strong> Proyecto en desarrollo activo (Fase 3 de 4). Arquitectura 
+    completa desplegada con Keycloak, microservicios operativos y módulos core funcionando. 
+    Próximos hitos: integración completa de bases de datos legacy, módulos 
+    de facturación y reporting.
+    <strong>Proyecto comercial real para cliente de 10+ años.</strong></p>
+  </div>
+
+        <span class="tag spring-boot">Spring Boot</span>
+        <span class="tag react">React</span>
+        <span class="tag postgresql">PostgreSQL</span>
+        <span class="tag keycloak">Keycloak</span>
+        <span class="tag docker">Docker</span>
+        <span class="tag kafka">Kafka</span>
+        <span class="tag elasticsearch">ElasticSearch</span>
+        <span class="tag jira">Jira</span>
+        <span class="tag confluence">Confluence</span>
+        <span class="tag notion">Notion</span>
+
+    </div>
+  
             <figure class="slider_picture">
               <img src="assets/nexo360.webp" class="slider_img" alt="Vista previa del proyecto Nexo 360" loading="lazy"/>
             </figure>
@@ -894,32 +988,47 @@
               y me enfoco en entregar resultados de calidad.
             </p>
             
-            
-              <p class="p">
-                Puedes ver mi CV completo descargándolo aquí:
-                <a
-                  href="http://www.olimarteam.uy/olimarteam/CV.pdf"
-                  class="cv-download"
-                  title="Descarga mi CV"
-                  target="_blank"
-                  rel="noopener noreferrer"
+            <p class="p">
+              Puedes ver mi CV completo descargándolo aquí:
+              <a
+                href="http://www.olimarteam.uy/olimarteam/CV.pdf"
+                class="cv-download"
+                title="Descarga mi CV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="12"
+                  width="12"
+                  class="cv-icon"
+                  viewBox="0 0 512 512"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="12"
-                    width="12"
-                    class="cv-icon"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"
-                    />
-                  </svg>
-                  <span>Descargar CV</span>
-                </a>
-              </p>
+                  <path
+                    d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"
+                  />
+                </svg>
+                <span>Descargar CV</span>
+              </a>
+            </p>
+            <div class="metricas">
+      <div class="metrica">
+        <span class="metrica-numero">10+</span>
+        <span class="metrica-label">Años de experiencia</span>
+      </div>
+      <div class="metrica">
+        <span class="metrica-numero">6+</span>
+        <span class="metrica-label">Proyectos completados</span>
+      </div>
+      <div class="metrica">
+        <span class="metrica-numero">8+</span>
+        <span class="metrica-label">Años manteniendo<br>sistemas en producción</span>
+      </div>
+    </div>
+            
             
           </div>
+          
         </div>
         
 
@@ -974,8 +1083,24 @@
       <section class="seccion contacto" id="contacto">
         <h2 class="h2">Contacto</h2>
         
+        
+    
+  </div>
+
         <div class="contacto-content">
           <div class="contacto-texto">
+            
+
+              <p class="p"><strong>¿Tenés un proyecto en mente?</strong></p>
+              <p class="p">
+                Estoy disponible para proyectos freelance y posiciones remotas. 
+                Si necesitás desarrollar una aplicación web, automatizar procesos 
+                o mejorar un sistema existente, <strong>hablemos</strong>.
+              </p>
+              <p class="respuesta-rapida">
+                ⚡ Respondo en menos de 24 horas
+              </p>
+            
             <p class="p">
               Puedes ponerte en contacto conmigo utilizando el siguiente formulario, 
               o enviándome un email a
