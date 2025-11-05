@@ -411,7 +411,7 @@
           
           <section class="slider_body" data-id="6">
             <div class="slider_texts">
-              <h2 class="subtitle">Nexo 360 | ERP/CRM para Servicios Médicos | SEPAE</h2>
+              <h2 class="subtitle">Nexo 360 | SEPAE</h2>
               <div class="project-details">
                 <p class="project-context"><strong>Contexto:</strong> Empresa de equipamiento médico y servicios de acompañamiento 
     con 2 sistemas legacy separados (10+ años de data): EQM (equipos médicos, 20k+ facturas) 
@@ -511,6 +511,94 @@
               </a>
             </figure>
           </section>
+
+            <!-- Proyecto nuevo: Simulación de automatización (n8n) -->
+            <section class="slider_body" data-id="9">
+              <div class="slider_texts">
+                <h2 class="subtitle">Automatizaciones con n8n </h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Demostración ligera de cómo una automatización orquesta acciones entre servicios: captura un evento, guarda datos en Google Sheets, envía un correo y notifica por WhatsApp.</p>
+                  <p class="project-solution"><strong>Simulación:</strong> Animación interactiva y repetitiva que muestra el flujo de datos entre los nodos representativos (n8n, Google Sheets, Gmail, WhatsApp). Ideal para explicar automatizaciones sin exponer datos reales.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> n8n (orquestación), Webhooks, Google Sheets API, Gmail API, WhatsApp API (simulado).</p>
+                </div>
+
+                <span class="tag n8n">n8n</span>
+                <span class="tag google-sheets">Google Sheets</span>
+                <span class="tag gmail">Gmail</span>
+                <span class="tag whatsapp">WhatsApp</span>
+              </div>
+              <figure class="slider_picture">
+                <!-- Inline SVG ligero que simula el flujo -->
+                <div class="flow-wrap" role="img" aria-label="Simulación de flujo de automatización: n8n a Google Sheets, Gmail y WhatsApp">
+                  <svg class="flow-sim" viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                      <!-- Nodes -->
+                      <g class="nodes">
+                        <g class="node" id="node-n8n">
+                          <circle cx="60" cy="90" r="30" class="node-bg n8n-bg" />
+                          <text x="60" y="96" text-anchor="middle" class="node-label">n8n</text>
+                        </g>
+                        <g class="node" id="node-wa-client">
+                          <circle cx="150" cy="90" r="36" class="node-bg wa-client-bg" />
+                          <text x="150" y="94" text-anchor="middle" class="node-label">
+                            <tspan x="150" dy="0">Consulta</tspan>
+                            <tspan x="150" dy="18">cliente</tspan>
+                          </text>
+                        </g>
+                        <g class="node" id="node-sheets">
+                          <rect x="200" y="65" width="80" height="50" rx="8" class="node-bg sheets-bg" />
+                          <text x="240" y="96" text-anchor="middle" class="node-label">Sheets</text>
+                        </g>
+
+                        <!-- Yes branch (upper) -->
+                        <g class="node" id="node-wa-yes">
+                          <circle cx="320" cy="45" r="34" class="node-bg wa-bg" />
+                          <text x="320" y="48" text-anchor="middle" class="node-label small">
+                            <tspan x="320" dy="0">WA (sí)</tspan>
+                            <tspan x="320" dy="14">cliente</tspan>
+                          </text>
+                        </g>
+                        <g class="node" id="node-gmail-yes">
+                          <rect x="380" y="45" width="100" height="40" rx="6" class="node-bg gmail-bg" />
+                          <text x="430" y="66" text-anchor="middle" class="node-label">
+                            <tspan x="430" dy="0">Gmail</tspan>
+                            <tspan x="430" dy="16">comercio</tspan>
+                          </text>
+                        </g>
+
+                        <!-- No branch (lower) -->
+                        <g class="node" id="node-wa-no">
+                          <circle cx="320" cy="135" r="34" class="node-bg wa-bg" />
+                          <text x="320" y="138" text-anchor="middle" class="node-label small">
+                            <tspan x="320" dy="0">WA (no)</tspan>
+                            <tspan x="320" dy="14">cliente</tspan>
+                          </text>
+                        </g>
+                        <g class="node" id="node-gmail-no">
+                          <rect x="380" y="100" width="100" height="40" rx="6" class="node-bg gmail-bg" />
+                          <text x="430" y="122" text-anchor="middle" class="node-label">
+                            <tspan x="430" dy="0">Gmail</tspan>
+                            <tspan x="430" dy="16">comercio</tspan>
+                          </text>
+                        </g>
+                      </g>
+
+                      <!-- Arrows (lines) including branches -->
+                      <g class="arrows" fill="none" stroke-width="2">
+                        <path class="arrow a1" d="M90 90 L114 90" stroke="#9CA3AF" />
+                        <path class="arrow a2" d="M186 90 L200 90" stroke="#9CA3AF" />
+                        <path class="arrow a3" d="M280 90 L320 45" stroke="#9CA3AF" />
+                        <path class="arrow a4" d="M280 90 L320 135" stroke="#9CA3AF" />
+                        <path class="arrow a5" d="M340 45 L380 65" stroke="#9CA3AF" />
+                        <path class="arrow a6" d="M340 135 L380 120" stroke="#9CA3AF" />
+                      </g>
+
+                      <!-- Moving dots that simulate conditional flow (yes/no) -->
+                      <circle class="flow-dot dot-yes" cx="60" cy="90" r="10" fill="#10B981" />
+                      <circle class="flow-dot dot-no" cx="60" cy="90" r="10" fill="#F97316" />
+                  </svg>
+                </div>
+              </figure>
+            </section>
           <img src="assets/rigthArrow.svg" class="slider_arrow" id="next" alt="Proyecto siguiente" aria-label="Ver proyecto siguiente" />
         </div>
         </div>
@@ -777,6 +865,22 @@
                   aria-hidden="true"
                   loading="lazy"
                 />
+              </a>
+            </li>
+            <li class="li">
+              <a
+                class="a"
+                title="n8n"
+                href="https://n8n.io/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="n8n - automatizaciones"
+              >
+                <!-- Fallback SVG simple para n8n (evita dependencia externa) -->
+                <svg class="svg" width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                  <rect x="0" y="0" width="24" height="24" rx="4" fill="#000000" />
+                  <text x="12" y="16" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#ffffff">n8n</text>
+                </svg>
               </a>
             </li>
           </div>
@@ -1064,7 +1168,7 @@
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              <p>Principalmente para Frontend utilizo React. Para Backend: Java con Spring Boot, Node.js y PostgreSQL. </p>
+              <p>Suelo usar una combinación de tecnologías según el alcance: <strong>Frontend</strong> con React; <strong>Backend</strong> en Java (Spring Boot) y Node.js; <strong>Bases de datos</strong> PostgreSQL y MySQL. Para automatizaciones y orquestación de flujos uso <strong>n8n</strong>. En DevOps trabajo con Docker, Docker Compose, AWS y Vercel. Para observabilidad y eventos: ELK Stack y Kafka. Herramientas: Git/GitHub, Postman, Jira, Notion y Figma.</p>
             </div>
           </div>
 
