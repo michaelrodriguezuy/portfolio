@@ -27,7 +27,9 @@
   --border-radius-lg: 50%;
 }
 
-/*esto lo hago para cambiar colores en base a si esta activo o no el dark mode*/
+/* Modo oscuro deshabilitado - El sitio siempre se mostrará en modo claro */
+/* Si necesitas reactivar el modo oscuro automático, descomenta el bloque siguiente */
+/*
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --blanco: #181818;
@@ -38,6 +40,7 @@
     --negro-7: rgba(255, 255, 255, 0.75);
   }
 }
+*/
 
 * {
   margin: 0;
