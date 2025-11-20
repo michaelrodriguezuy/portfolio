@@ -1,12 +1,12 @@
 :root {
-  /* Colores principales */
+  /* Colores principales - Modo claro siempre */
   --blanco: white;
   --blanco-2: rgba(255, 255, 255, 0.2);
   --gris-f: #757575;
-  --negro: black;
+  --negro: #1a1a1a;
   --negro-5: rgba(0, 0, 0, 0.5);
-  --negro-7: rgba(0, 0, 0, 0.75);
-  --texto-oscuro: #1e1e1ed9;
+  --negro-7: transparent;
+  --texto-oscuro: #9a9a9a;
   --texto-sky: #558aff;
   --sombra-ppal: #c9c9c9;
 
@@ -27,20 +27,7 @@
   --border-radius-lg: 50%;
 }
 
-/* Modo oscuro deshabilitado - El sitio siempre se mostrará en modo claro */
-/* Si necesitas reactivar el modo oscuro automático, descomenta el bloque siguiente */
-/*
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --blanco: #181818;
-    --blanco-2: rgba(0, 0, 0, 0.2);
-    --gris-f: grey;
-    --negro: #e0e0e0;
-    --negro-5: rgba(255, 255, 255, 0.5);
-    --negro-7: rgba(255, 255, 255, 0.75);
-  }
-}
-*/
+/* Media query deshabilitada - siempre modo claro */
 
 * {
   margin: 0;
@@ -183,8 +170,8 @@ select {
 body {
   min-height: 100vh;
 
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--blanco);
+  color: var(--negro);
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -230,6 +217,7 @@ li {
   left: 0;
   z-index: 1;
   filter: blur(40px);
+  opacity: 0.5;
   animation: circulo1 50s linear infinite both;
 }
 
@@ -247,7 +235,7 @@ li {
 }
 
 .circulos .circulo1 .path {
-  fill: var(--gris-f);
+  fill: #f0f0f0;
 }
 
 .circulos .circulo2 {
@@ -256,7 +244,7 @@ li {
 }
 
 .circulos .circulo2 .path {
-  fill: var(--negro);
+  fill: #e8e8e8;
 }
 
 .circulos .circulo3 {
@@ -265,7 +253,7 @@ li {
 }
 
 .circulos .circulo3 .path {
-  fill: #2e8b57;
+  fill: #b8e6d0;
 }
 
 .circulos .circulo4 {
@@ -274,7 +262,7 @@ li {
 }
 
 .circulos .circulo4 .path {
-  fill: skyblue;
+  fill: #c8e8f5;
 }
 
 .header {
@@ -332,7 +320,7 @@ li {
 
 /* Enlaces del header en mayúsculas */
 .header .a {
-  color: var(--blanco);
+  color: var(--negro);
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -461,7 +449,7 @@ li {
 
 .seccion .ul .a:hover {
   /*background-color: var(--negro-7);*/
-  color: var(--blanco);
+  color: var(--negro);
   transform: translateY(-2px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -471,7 +459,7 @@ li {
   font-weight: 600;
   font-size: 5rem;
   line-height: 1em;
-  color: var(--blanco);
+  color: #b8b8b8;
   mix-blend-mode: exclusion;
 }
 
@@ -572,7 +560,7 @@ li {
   font-weight: 600;
   font-size: 5rem;
   line-height: 1em;
-  color: var(--blanco);
+  color: #b8b8b8;
   mix-blend-mode: exclusion;
 }
 .p {
@@ -677,59 +665,213 @@ li {
 .wa-client-bg { fill: #0891B2; }
 
 .arrow {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
   stroke-linecap: round;
-  animation: drawArrow 0.6s ease forwards;
+  stroke: #4A5568;
+  stroke-width: 2.5;
+  opacity: 1;
+  stroke-dasharray: 10,5;
+  animation: drawArrowLine 2s linear infinite;
 }
-.arrow.a1 { animation-delay: 0.2s; }
-.arrow.a2 { animation-delay: 0.8s; }
-.arrow.a3 { animation-delay: 1.4s; }
-.arrow.a4 { animation-delay: 1.8s; }
-.arrow.a5 { animation-delay: 2.2s; }
-.arrow.a6 { animation-delay: 2.6s; }
+.arrow.a1 { animation-delay: 0s; }
+.arrow.a2 { animation-delay: 0.4s; }
+.arrow.a3 { animation-delay: 0.8s; }
+.arrow.a4 { animation-delay: 0.8s; }
+.arrow.a5 { animation-delay: 1.2s; }
+.arrow.a6 { animation-delay: 1.2s; }
 
-@keyframes drawArrow {
-  to { stroke-dashoffset: 0; }
+@keyframes drawArrowLine {
+  0% { 
+    stroke-dashoffset: 15;
+  }
+  100% { 
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Dots that simulate conditional flows (yes/no) */
 .flow-dot {
   transform-origin: 60px 90px;
-  opacity: 0;
+  opacity: 1;
+  stroke: #4A5568;
+  stroke-width: 2;
+  fill: #4A5568;
 }
 
-/* Dot animations for yes/no branches (positions calculated for the SVG layout) */
-.dot-yes {
-  animation: flowYes 4s linear infinite;
+/* Single dot animation that goes through yes path first, then no path */
+.dot-single {
+  animation: flowSingle 16s linear infinite;
 }
-.dot-no {
-  animation: flowNo 4s linear infinite;
-  animation-delay: 2s;
+
+@keyframes flowSingle {
+  /* First cycle: Yes path (0-50%) */
+  0% { transform: translate(0,0); opacity: 0; }
+  1.5% { opacity: 1; }
+  5% { transform: translate(0,0); }
+  7.5% { transform: translate(90px,0); opacity: 1; }    /* to n8n */
+  17.5% { transform: translate(140px,0); opacity: 1; }   /* to Sheets */
+  27.5% { transform: translate(260px,-45px); opacity: 1; }/* to WA yes */
+  37.5% { transform: translate(320px,-25px); opacity: 1; }/* to Gmail yes */
+  45% { opacity: 0.8; }
+  50% { transform: translate(0,0); opacity: 0; }
+  
+  /* Second cycle: No path (50-100%) */
+  50% { transform: translate(0,0); opacity: 0; }
+  51.5% { opacity: 1; }
+  55% { transform: translate(0,0); }
+  57.5% { transform: translate(90px,0); opacity: 1; }    /* to n8n */
+  67.5% { transform: translate(140px,0); opacity: 1; }   /* to Sheets */
+  77.5% { transform: translate(260px,45px); opacity: 1; } /* to WA no */
+  87.5% { transform: translate(320px,30px); opacity: 1; } /* to Gmail no */
+  95% { opacity: 0.8; }
+  100% { transform: translate(0,0); opacity: 0; }
 }
 
 .flow-sim .node-label.small { font-size: 11px; }
 
 @keyframes flowYes {
   0% { transform: translate(0,0); opacity: 0; }
-  6% { opacity: 1; }
-  18% { transform: translate(90px,0); }    /* to WA cliente (moved further right) */
-  38% { transform: translate(180px,0); }   /* to Sheets (center ~240) */
-  58% { transform: translate(260px,-45px); }/* to WA yes (higher) */
-  74% { transform: translate(370px,-25px); }/* to Gmail yes */
+  3% { opacity: 1; }
+  10% { transform: translate(0,0); }
+  15% { transform: translate(90px,0); opacity: 1; }    /* to n8n */
+  35% { transform: translate(140px,0); opacity: 1; }   /* to Sheets */
+  55% { transform: translate(260px,-45px); opacity: 1; }/* to WA yes */
+  75% { transform: translate(320px,-25px); opacity: 1; }/* to Gmail yes */
   90% { opacity: 0.8; }
   100% { transform: translate(0,0); opacity: 0; }
 }
 
 @keyframes flowNo {
   0% { transform: translate(0,0); opacity: 0; }
-  6% { opacity: 1; }
-  18% { transform: translate(90px,0); }    /* to WA cliente (moved further right) */
-  38% { transform: translate(180px,0); }   /* to Sheets (center ~240) */
-  58% { transform: translate(260px,45px); } /* to WA no (lower) */
-  74% { transform: translate(370px,30px); } /* to Gmail no */
+  3% { opacity: 1; }
+  10% { transform: translate(0,0); }
+  15% { transform: translate(90px,0); opacity: 1; }    /* to n8n */
+  35% { transform: translate(140px,0); opacity: 1; }   /* to Sheets */
+  55% { transform: translate(260px,45px); opacity: 1; } /* to WA no */
+  75% { transform: translate(320px,30px); opacity: 1; } /* to Gmail no */
   90% { opacity: 0.8; }
   100% { transform: translate(0,0); opacity: 0; }
+}
+
+/* Labels centrales que aparecen en secuencia siguiendo el flujo */
+.flow-label {
+  pointer-events: none;
+  font-family: var(--tipo-principal);
+  opacity: 0;
+  animation: flowLabelShow 16s linear infinite; /* 16s para cubrir ambos caminos (yes y no) */
+}
+
+/* Consulta del cliente - aparece al inicio de cada ciclo (0% y 50%) */
+.flow-label-1 {
+  animation: flowLabelShowBoth 16s linear infinite;
+  animation-delay: 0s; /* Primera vez: inicio del ciclo yes, Segunda vez: 8s (inicio del ciclo no) */
+}
+
+/* Procesamiento en n8n - aparece cuando llega a n8n */
+.flow-label-2 {
+  animation: flowLabelShowBoth 16s linear infinite;
+  animation-delay: 1.2s; /* Primera vez: 1.2s, Segunda vez: 9.2s */
+}
+
+/* Consulta en Google Sheets - aparece cuando llega a Sheets */
+.flow-label-3 {
+  animation: flowLabelShowBoth 16s linear infinite;
+  animation-delay: 2.8s; /* Primera vez: 2.8s, Segunda vez: 10.8s */
+}
+
+@keyframes flowLabelShowBoth {
+  0%, 2% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  4%, 10% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+  12%, 48% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  /* Segunda aparición en el ciclo no */
+  50%, 52% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  54%, 60% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+  62%, 100% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+}
+
+/* Respuesta positiva al cliente (camino de arriba) - aparece cuando llega a WhatsApp yes */
+.flow-label-4-yes {
+  animation: flowLabelShowSingle 16s linear infinite;
+  animation-delay: 4.4s; /* Aparece en 27.5% del ciclo (4.4s de 16s) */
+}
+
+/* Aviso por correo al comercio (después de respuesta positiva) - aparece cuando llega a Gmail yes */
+.flow-label-5-yes {
+  animation: flowLabelShowSingle 16s linear infinite;
+  animation-delay: 6s; /* Aparece en 37.5% del ciclo (6s de 16s) */
+}
+
+/* Respuesta negativa al cliente (camino de abajo) - aparece cuando llega a WhatsApp no */
+.flow-label-4-no {
+  animation: flowLabelShowSingle 16s linear infinite;
+  animation-delay: 12.4s; /* Aparece en 77.5% del ciclo (12.4s de 16s) */
+}
+
+/* Aviso por correo al comercio (después de respuesta negativa) - aparece cuando llega a Gmail no */
+.flow-label-5-no {
+  animation: flowLabelShowSingle 16s linear infinite;
+  animation-delay: 14s; /* Aparece en 87.5% del ciclo (14s de 16s) */
+}
+
+@keyframes flowLabelShowSingle {
+  /* Aparece solo una vez en el momento correcto basado en el delay */
+  0%, 1% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  2%, 8% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+  10%, 100% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes flowLabelShow {
+  0%, 2% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  4%, 10% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+  12%, 48% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  /* Segunda aparición para labels que se repiten en ambos ciclos */
+  50%, 52% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
+  54%, 60% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+  62%, 100% { 
+    opacity: 0; 
+    transform: translateY(-5px);
+  }
 }
 
 /* Respect user's preference for reduced motion */
@@ -782,6 +924,7 @@ li {
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: left; /* alinear títulos a la izquierda */
+  color: var(--negro);
 }
 .slider_review {
   font-weight: 300;
@@ -834,14 +977,14 @@ li {
   font-family: var(--tipo-alternativo);
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--blanco);
+  color: var(--negro);
   margin-bottom: 1rem;
 }
 
 .servicio-descripcion {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--blanco);
+  color: var(--negro);
   margin-bottom: 1rem;
   opacity: 0.9;
 }
@@ -861,7 +1004,7 @@ li {
 .servicios-cta p {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--blanco);
+  color: var(--negro);
   margin-bottom: 1.5rem;
 }
 
@@ -869,7 +1012,7 @@ li {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: var(--texto-sky);
-  color: var(--blanco);
+  color: var(--negro);
   text-decoration: none;
   border-radius: var(--border-radius);
   font-family: var(--tipo-alternativo);
@@ -880,10 +1023,10 @@ li {
 }
 
 .btn-cta:hover {
-  background-color: var(--blanco);
-  color: var(--texto-sky);
+  background-color: var(--negro);
+  color: var(--blanco);
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(85, 138, 255, 0.3);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para el nuevo formato de proyectos */
@@ -896,7 +1039,7 @@ li {
   margin-bottom: 12px;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--blanco);
+  color: var(--negro);
 }
 
 .project-context {
@@ -1051,9 +1194,9 @@ li {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  color: var(--blanco);
+  color: var(--negro);
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -1299,7 +1442,7 @@ li {
   gap: 2rem;
   margin: 3rem 0;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: transparent;
   border-radius: var(--border-radius);
 }
 
@@ -1310,13 +1453,12 @@ li {
   text-align: center;
   padding: 1.5rem 1rem;
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, background 0.3s ease;
+  background: transparent;
+  transition: transform 0.3s ease;
 }
 
 .metrica:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .metrica-numero {
@@ -1343,9 +1485,9 @@ li {
   margin-top: 2rem;
   text-align: center;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: transparent;
   border-radius: var(--border-radius);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
 }
 
 .cv-text {
@@ -1359,7 +1501,7 @@ li {
   gap: 0.5rem;
   padding: 0.8rem 1.5rem;
   background-color: var(--texto-sky);
-  color: var(--blanco);
+  color: var(--negro);
   text-decoration: none;
   border-radius: var(--border-radius);
   font-family: var(--tipo-alternativo);
@@ -1370,8 +1512,8 @@ li {
 }
 
 .cv-download:hover {
-  background-color: var(--blanco);
-  color: var(--texto-sky);
+  background-color: var(--negro);
+  color: var(--blanco);
   transform: translateY(-2px);
 }
 
@@ -1414,7 +1556,7 @@ li {
   font-family: var(--tipo-alternativo);
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--blanco);
+  color: var(--negro);
   margin: 0;
   flex: 1;
   padding-right: 1rem;
@@ -1448,7 +1590,7 @@ li {
   font-family: var(--tipo-principal);
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--blanco);
+  color: var(--negro);
   margin: 0;
   opacity: 0.9;
 }
@@ -1501,7 +1643,7 @@ li {
 }
 
 .contacto-texto a:hover {
-  color: var(--blanco);
+  color: var(--negro);
   text-decoration: underline;
 }
 
@@ -1526,7 +1668,7 @@ li {
 .contacto-cta p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--blanco);
+  color: var(--negro);
   margin: 0 0 1rem;
 }
 
@@ -1599,7 +1741,7 @@ li {
 .btn-enviar {
   padding: 1rem 2rem;
   background-color: var(--texto-sky);
-  color: var(--blanco);
+  color: var(--negro);
   border: none;
   border-radius: var(--border-radius);
   font-family: var(--tipo-alternativo);
@@ -1613,8 +1755,8 @@ li {
 }
 
 .btn-enviar:hover {
-  background-color: var(--blanco);
-  color: var(--texto-sky);
+  background-color: var(--negro);
+  color: var(--blanco);
   transform: translateY(-2px);
 }
 
@@ -1633,9 +1775,9 @@ li {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  color: var(--blanco);
+  color: var(--negro);
   transition: all 0.3s ease;
   text-decoration: none;
   outline: none;
@@ -1666,7 +1808,7 @@ li {
 
 /* Icono de WhatsApp con colores acordes */
 .contacto-redes-inline .fab.fa-whatsapp {
-  color: var(--blanco);
+  color: var(--negro);
   font-size: 1.2rem;
 }
 
@@ -1892,6 +2034,30 @@ li {
   .metrica-label {
     font-size: 0.9rem;
   }
+  
+  .skills .rrss {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .skills .li {
+    flex-basis: calc(25% - 0.5rem);
+    margin: 0.5em;
+  }
+  
+  .skills .svg {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  
+  .columna {
+    margin-bottom: 15px;
+  }
+  
+  .columna .h3 {
+    font-size: 0.9rem;
+    margin: 15px 10px 5px;
+  }
 }
 
 /* Responsive para FAQ */
@@ -2057,7 +2223,7 @@ li {
   font-family: var(--tipo-alternativo);
   font-size: 4rem;
   font-weight: 700;
-  color: var(--blanco);
+  color: var(--negro);
   margin: 0 0 1.5rem 0;
   line-height: 1.1;
   text-transform: uppercase;
