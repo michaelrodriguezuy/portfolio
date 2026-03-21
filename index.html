@@ -174,43 +174,78 @@
         Desarrollo software a medida y automatizaciones para pequeñas y medianas empresas.
       </p>
 
-      <div class="servicios-grid">
-        <div class="servicio-card">
-          <div class="servicio-icono">⚙️</div>
-          <h3 class="servicio-titulo">Automatizaciones</h3>
-          <p class="servicio-descripcion">
-            Automatizo procesos repetitivos: integración de sistemas, reportes automáticos,
-            sincronización de datos y notificaciones.
-          </p>
-          <p class="servicio-ejemplo">
-            <strong>Ej:</strong> Conectar ventas con contabilidad para registro automático de facturas.
-          </p>
-        </div>
 
-        <div class="servicio-card">
-          <div class="servicio-icono">💻</div>
-          <h3 class="servicio-titulo">Aplicaciones Web</h3>
-          <p class="servicio-descripcion">
-            Sistemas completos: gestión de clientes, inventario, facturación y reportes.
-            Soluciones escalables con React, Node.js y PostgreSQL.
-          </p>
-          <p class="servicio-ejemplo">
-            <strong>Ej:</strong> Sistema de gestión que reemplace planillas Excel por una plataforma profesional.
-          </p>
-        </div>
+      <div class="animated-services-container" id="animated-services">
+        <div class="as-grid">
 
-        <div class="servicio-card">
-          <div class="servicio-icono">🔧</div>
-          <h3 class="servicio-titulo">Mantenimiento & Soporte</h3>
-          <p class="servicio-descripcion">
-            Mantenimiento de sistemas existentes, actualizaciones, corrección de bugs
-            y soporte técnico continuo para sistemas legacy y modernos.
-          </p>
-          <p class="servicio-ejemplo">
-            <strong>Ej:</strong> Mantener tu sistema actual y agregar funcionalidades según tu negocio crece.
-          </p>
+          <!-- Lado Izquierdo: Stack de imágenes (Z-index layering 3D) -->
+          <div class="as-image-container">
+            <!-- Servicio 1 -->
+            <div class="as-img-wrapper" data-index="0" data-rotate="-8">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=3540&auto=format&fit=crop"
+                alt="Automatizaciones" loading="lazy" />
+            </div>
+            <!-- Servicio 2 -->
+            <div class="as-img-wrapper" data-index="1" data-rotate="8">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=3540&auto=format&fit=crop"
+                alt="Aplicaciones Web" loading="lazy" />
+            </div>
+            <!-- Servicio 3 -->
+            <div class="as-img-wrapper" data-index="2" data-rotate="-10">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=3540&auto=format&fit=crop"
+                alt="Mantenimiento y Soporte" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Lado Derecho: Textos -->
+          <div class="as-content-container">
+            <div class="as-texts-container">
+
+              <!-- Servicio 1 -->
+              <div class="as-text-wrapper active" data-index="0">
+                <h3 class="h3 name">Automatizaciones <span>⚙️</span></h3>
+                <p class="designation"><strong>Ej:</strong> Conectar ventas con contabilidad para registro automático de
+                  facturas.</p>
+                <div class="quote">
+                  Automatizo procesos repetitivos: integración de sistemas, reportes automáticos, sincronización de
+                  datos y notificaciones.
+                </div>
+              </div>
+
+              <!-- Servicio 2 -->
+              <div class="as-text-wrapper" data-index="1">
+                <h3 class="h3 name">Aplicaciones Web <span>💻</span></h3>
+                <p class="designation"><strong>Ej:</strong> Sistema de gestión que reemplace planillas Excel por una
+                  plataforma profesional.</p>
+                <div class="quote">
+                  Sistemas completos: gestión de clientes, inventario, facturación y reportes. Soluciones escalables con
+                  React, Node.js y PostgreSQL.
+                </div>
+              </div>
+
+              <!-- Servicio 3 -->
+              <div class="as-text-wrapper" data-index="2">
+                <h3 class="h3 name">Mantenimiento & Soporte <span>🔧</span></h3>
+                <p class="designation"><strong>Ej:</strong> Mantener tu sistema actual y agregar funcionalidades según
+                  tu negocio crece.</p>
+                <div class="quote">
+                  Mantenimiento de sistemas existentes, actualizaciones, corrección de bugs y soporte técnico continuo
+                  para sistemas legacy y modernos.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="as-arrows">
+              <button class="as-arrow as-prev" aria-label="Servicio anterior"><i class="fas fa-arrow-left"></i></button>
+              <button class="as-arrow as-next" aria-label="Siguiente servicio"><i
+                  class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
         </div>
       </div>
+
 
       <div class="servicios-cta">
         <p>¿Tenés procesos que te hacen perder tiempo?</p>
@@ -228,435 +263,357 @@
       </p>
 
       <!-- INICIO DE LOS PROYECTOS -->
-      <div class="slider">
-        <div class="slider_container container">
-          <img src="assets/leftArrow.svg" class="slider_arrow" id="before" alt="Proyecto anterior"
-            aria-label="Ver proyecto anterior" />
-          <section class="slider_body slider_body--show" data-id="1">
-            <div class="slider_texts">
-              <h2 class="subtitle">e-commerce</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Desarrollo de plataforma eCommerce personal para
-                  demostrar habilidades full-stack y crear una base reutilizable para proyectos comerciales.</p>
-                <p class="project-solution"><strong>Solución:</strong> Plataforma completa con catálogo de productos,
-                  carrito de compras, sistema de pagos integrado y panel de administración.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> React para interfaz de usuario, Material UI para
-                  componentes, MercadoPago para pagos, Firebase para backend, Formik/Yup para validaciones.</p>
-                <p class="project-results"><strong>Resultados:</strong> Proyecto funcional que sirvió como base para
-                  proyectos comerciales posteriores, demostrando habilidades full-stack completas.</p>
-              </div>
-              <span class="tag react">React</span>
-              <span class="tag nodejs">Node.js</span>
-              <span class="tag vite">Vite</span>
-              <span class="tag mercado-pago">Mercado Pago</span>
-              <span class="tag material-ui">Material UI</span>
-              <span class="tag axios">Axios</span>
-              <span class="tag firebase">Firebase</span>
-              <span class="tag formik">Formik</span>
-              <span class="tag sweetalert">SweetAlert</span>
-              <span class="tag uuid">UUID</span>
-              <span class="tag yup">Yup</span>
-              <span class="tag react-router-dom">React Router DOM</span>
-              <span class="tag canvas-confetti">Canvas Confetti</span>
+      <div class="circular-slider-container" id="cs-container">
+        <div class="circular-slider-grid">
+
+          <!-- Contenedor de Imágenes -->
+          <div class="cs-image-container" id="cs-image-container">
+            <div class="cs-image-wrapper" data-index="0">
+              <figure class="slider_picture">
+                <img src="assets/eqm.webp" class="slider_img" alt="Vista previa del sistema EQM" loading="lazy" />
+              </figure>
             </div>
 
-            <figure class="slider_picture">
-              <a href="https://e-commerce-v4.vercel.app/" target="_blank">
-                <img src="assets/eCommerce.webp" class="slider_img" alt="Vista previa eCommerce desarrollado en React"
+            <div class="cs-image-wrapper" data-index="1">
+              <figure class="slider_picture">
+                <img src="assets/nexo360.webp" class="slider_img" alt="Vista previa del proyecto Nexo 360"
                   loading="lazy" />
-              </a>
-            </figure>
-          </section>
-
-          <section class="slider_body" data-id="7">
-            <div class="slider_texts">
-              <h2 class="subtitle">e-commerce | Kuka Store</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Tienda de vestimenta para jóvenes necesitaba
-                  expandirse al canal online y automatizar procesos de venta.</p>
-                <p class="project-solution"><strong>Solución:</strong> Plataforma eCommerce completa con catálogo de
-                  productos, carrito de compras, sistema de pagos y panel de administración.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> React para interfaz de usuario, Material UI para
-                  componentes, MercadoPago para pagos, Firebase para backend, Formik/Yup para validaciones.</p>
-                <p class="project-results"><strong>Resultados:</strong> Tienda online operativa, aumento de alcance de
-                  clientes y automatización completa del proceso de ventas.</p>
-              </div>
-              <span class="tag react">React</span>
-              <span class="tag nodejs">Node.js</span>
-              <span class="tag vite">Vite</span>
-              <span class="tag material-ui">Material UI</span>
-              <span class="tag mercado-pago">Mercado Pago</span>
-              <span class="tag firebase">Firebase</span>
-              <span class="tag formik">Formik</span>
-              <span class="tag sweetalert">SweetAlert</span>
-              <span class="tag uuid">UUID</span>
-              <span class="tag yup">Yup</span>
-              <span class="tag react-router-dom">React Router DOM</span>
-              <span class="tag canvas-confetti">Canvas Confetti</span>
-              <span class="tag axios">Axios</span>
-            </div>
-            <figure class="slider_picture">
-              <a href="https://www.kukastore.com.uy" target="_blank">
-                <img src="assets/kukastore.webp" class="slider_img" alt="Vista previa de Kuka Store" loading="lazy" />
-              </a>
-            </figure>
-          </section>
-
-          <section class="slider_body" data-id="8">
-            <div class="slider_texts">
-              <h2 class="subtitle">e-commerce | India Cueros</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Negocio de artesanías y artículos en cuero
-                  necesitaba establecer presencia online y mostrar su catálogo de productos.</p>
-                <p class="project-solution"><strong>Solución:</strong> Sitio web corporativo con catálogo de productos,
-                  información del negocio y formulario de contacto.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> React para interfaz de usuario, Material UI para
-                  componentes, Firebase para backend, Formik/Yup para validaciones.</p>
-                <p class="project-results"><strong>Resultados:</strong> Presencia online establecida, mejor visibilidad
-                  en buscadores y canal de contacto directo con clientes.</p>
-              </div>
-              <span class="tag react">React</span>
-              <span class="tag nodejs">Node.js</span>
-              <span class="tag vite">Vite</span>
-              <span class="tag material-ui">Material UI</span>
-              <span class="tag mercado-pago">Mercado Pago</span>
-              <span class="tag firebase">Firebase</span>
-              <span class="tag formik">Formik</span>
-              <span class="tag sweetalert">SweetAlert</span>
-              <span class="tag uuid">UUID</span>
-              <span class="tag yup">Yup</span>
-              <span class="tag react-router-dom">React Router DOM</span>
-              <span class="tag canvas-confetti">Canvas Confetti</span>
-              <span class="tag axios">Axios</span>
-            </div>
-            <figure class="slider_picture">
-              <a href="https://www.indiacueros.com.uy" target="_blank">
-                <img src="assets/indiacueros.webp" class="slider_img" alt="Vista previa de India Cueros"
-                  loading="lazy" />
-              </a>
-            </figure>
-          </section>
-
-          <!-- <section class="slider_body" data-id="2">
-            <div class="slider_texts">
-              <h2 class="subtitle">Sitio web de películas</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Proyecto de práctica para dominar hooks avanzados de React, Context API y autenticación JWT.</p>
-                <p class="project-solution"><strong>Solución:</strong> Aplicación web completa con sistema de autenticación, rutas protegidas, gestión de películas y lista de favoritos.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> React para interfaz de usuario, Material UI para componentes, PostgreSQL para base de datos, Context API para estado global, JWT para autenticación.</p>
-                <p class="project-results"><strong>Resultados:</strong> Dominio completo de hooks avanzados, autenticación segura y arquitectura de aplicaciones React complejas.</p>
-              </div>
-
-              <span class="tag react">React</span>
-              <span class="tag vite">Vite</span>
-              <span class="tag material-ui">Material UI</span>
-              <span class="tag postgresql">PostgreSQL</span>
-              <span class="tag vercel">Vercel</span>
-              <span class="tag axios">Axios</span>
-              <span class="tag formik">Formik</span>
-              <span class="tag yup">Yup</span>
-              <span class="tag react-router-dom">React Router DOM</span>
-              <span class="tag json-server">Json-server</span>
-              <span class="tag login">Login</span>
-              <span class="tag context">Context</span>
-              <span class="tag protected">ProtectedRoutes</span>
-              <span class="tag canvas-confetti">Canvas Confetti</span>
-            </div>
-            <figure class="slider_picture">
-              <a href="https://pelis-alpha.vercel.app" target="_blank">
-                <img src="assets/pelis.webp" class="slider_img" alt="Vista previa del sitio web de películas" loading="lazy" />
-              </a>
-            </figure>
-          </section> -->
-
-          <section class="slider_body" data-id="4">
-            <div class="slider_texts">
-              <h2 class="subtitle">Sistema de Gestión Deportiva | Club Yerbalito de Fútbol</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Club de baby fútbol con 160+ jugadores en 11
-                  categorías
-                  gestionaba cuotas manualmente con planillas Excel, generando errores, pagos duplicados
-                  y pérdida de tiempo administrativo. Necesitaban una solución integral que digitalizara
-                  todo el proceso.</p>
-                <p class="project-solution"><strong>Solución:</strong> Sistema web completo con gestión de jugadores,
-                  pagos mensuales,
-                  generación de comprobantes PDF, reportes anuales, fixture de partidos y blog
-                  de noticias. Incluye sistema de hermanos con pagos compartidos y notificaciones de cumpleaños.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> React + Vite para frontend, Node.js + Express para
-                  backend,
-                  MySQL para base de datos, Material-UI + Tailwind para UI, Docker para despliegue.
-                  Arquitectura full-stack con autenticación, validaciones avanzadas y generación de PDFs.</p>
-
-
-
-                <p class="project-results"><strong>Resultados:</strong> Sistema operativo hace 8+ años con
-                  actualizaciones continuas.
-                  Reducción del 90% en tiempo administrativo, eliminación de errores de cobro, comprobantes
-                  automáticos por WhatsApp/Email. Actualmente gestiona 160+ jugadores activos y 1000+ recibos
-                  anuales. <strong>Proyecto real en producción mantenido desde 2016.</strong></p>
-              </div>
-
-
-              <span class="tag react">React</span>
-              <span class="tag nodejs">Node.js</span>
-              <span class="tag express">Express</span>
-              <span class="tag mysql">MySQL</span>
-              <span class="tag material-ui">Material UI</span>
-              <span class="tag tailwind">Tailwind</span>
-              <span class="tag docker">Docker</span>
-
+              </figure>
             </div>
 
-            <figure class="slider_picture">
-              <a href="http://yerbalito.uy" target="_blank">
-                <img src="assets/yerbalito.webp" class="slider_img" alt="Vista previa del sitio web del Club Yerbalito"
-                  loading="lazy" />
-              </a>
-            </figure>
-          </section>
-          <section class="slider_body" data-id="5">
-            <div class="slider_texts">
-              <h2 class="subtitle">EQM | Empresa de equipamiento médico</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> El cliente necesitaba gestionar stock, alquiler y
-                  venta de equipos médicos. Posteriormente se incorporó facturación electrónica.</p>
-                <p class="project-solution"><strong>Solución:</strong> Sistema integral de gestión desarrollado en
-                  VB.NET con PostgreSQL, operativo desde hace más de 8 años con mantenimiento continuo.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> VB.NET para lógica de negocio, PostgreSQL para
-                  base de datos, e-Factura para facturación electrónica.</p>
-                <p class="project-results"><strong>Resultados:</strong> Sistema estable operativo por más de 8 años,
-                  gestión integral de operaciones y facturación electrónica implementada exitosamente.</p>
-              </div>
-              <span class="tag vb-net">VB.NET</span>
-              <span class="tag postgresql">PostgreSQL</span>
-              <span class="tag eFactura">e-Factura</span>
-            </div>
-            <figure class="slider_picture">
-              <img src="assets/eqm.webp" class="slider_img" alt="Vista previa del sistema EQM" loading="lazy" />
-            </figure>
-          </section>
-
-          <section class="slider_body" data-id="6">
-            <div class="slider_texts">
-              <h2 class="subtitle">Nexo 360 | Empresa de equipamiento médico</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Empresa de equipamiento médico y servicios de
-                  acompañamiento
-                  con 2 sistemas legacy separados (10+ años de data): EQM (equipos médicos, 20k+ facturas)
-                  y GISA (gestión de acompañantes, 3k+ socios). Operaban con procesos manuales duplicados,
-                  datos inconsistentes y falta de integración entre sistemas.</p>
-                <p class="project-solution"><strong>Solución:</strong> Sistema integral moderno (ERP + CRM) con
-                  arquitectura de
-                  microservicios que unifica ambos sistemas legacy. Incluye gestión de clientes/socios,
-                  inventario de equipos médicos, servicios de acompañamiento, facturación electrónica,
-                  reportes analíticos y dashboard ejecutivo. Migración e integración de 2 bases de datos
-                  PostgreSQL con resolución de datos duplicados.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> Spring Boot (microservicios), React + Refine
-                  (frontend),
-                  Keycloak (autenticación OAuth2), Docker + Docker Compose (infraestructura), PostgreSQL,
-                  Kafka (eventos), ELK Stack (observabilidad), GitHub Actions (CI/CD). Herramientas:
-                  Jira, Confluence, Notion. Metodologías ágiles con sprints de 2 semanas. </p>
-
-                <p class="project-results"><strong>Resultados:</strong> Proyecto en desarrollo activo (Fase 3 de 4).
-                  Arquitectura
-                  completa desplegada con Keycloak, microservicios operativos y módulos core funcionando.
-                  Próximos hitos: integración completa de bases de datos legacy, módulos
-                  de facturación y reporting.
-                  <strong>Proyecto comercial real para cliente de 10+ años.</strong>
-                </p>
-              </div>
-
-              <span class="tag spring-boot">Spring Boot</span>
-              <span class="tag react">React</span>
-              <span class="tag postgresql">PostgreSQL</span>
-              <span class="tag keycloak">Keycloak</span>
-              <span class="tag docker">Docker</span>
-              <span class="tag kafka">Kafka</span>
-              <span class="tag elasticsearch">ElasticSearch</span>
-              <span class="tag jira">Jira</span>
-              <span class="tag confluence">Confluence</span>
-              <span class="tag notion">Notion</span>
-
+            <div class="cs-image-wrapper" data-index="2">
+              <figure class="slider_picture">
+                <a href="http://yerbalito.uy" target="_blank">
+                  <img src="assets/yerbalito.webp" class="slider_img"
+                    alt="Vista previa del sitio web del Club Yerbalito" loading="lazy" />
+                </a>
+              </figure>
             </div>
 
-            <figure class="slider_picture">
-              <img src="assets/nexo360.webp" class="slider_img" alt="Vista previa del proyecto Nexo 360"
-                loading="lazy" />
-            </figure>
-          </section>
-
-
-
-          <!-- Proyecto nuevo: Simulación de automatización (n8n) -->
-          <section class="slider_body" data-id="9">
-            <div class="slider_texts">
-              <h2 class="subtitle">Automatizaciones con n8n</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Demostración ligera de cómo una automatización
-                  orquesta acciones entre servicios: captura un evento, guarda datos en Google Sheets, envía un correo y
-                  notifica por WhatsApp.</p>
-                <p class="project-solution"><strong>Simulación:</strong> Animación interactiva y repetitiva que muestra
-                  el flujo de datos entre los nodos representativos (n8n, Google Sheets, Gmail, WhatsApp). Ideal para
-                  explicar automatizaciones sin exponer datos reales.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> n8n (orquestación), Webhooks, Google Sheets API,
-                  Gmail API, WhatsApp API (simulado).</p>
-              </div>
-
-              <span class="tag n8n">n8n</span>
-              <span class="tag google-sheets">Google Sheets</span>
-              <span class="tag gmail">Gmail</span>
-              <span class="tag whatsapp">WhatsApp</span>
+            <div class="cs-image-wrapper" data-index="3">
+              <figure class="slider_picture">
+                <a href="https://e-commerce-v4.vercel.app/" target="_blank">
+                  <img src="assets/eCommerce.webp" class="slider_img" alt="Vista previa eCommerce" loading="lazy" />
+                </a>
+              </figure>
             </div>
-            <figure class="slider_picture">
-              <!-- Inline SVG ligero que simula el flujo -->
-              <div class="flow-wrap" role="img"
-                aria-label="Simulación de flujo de automatización: n8n a Google Sheets, Gmail y WhatsApp">
-                <svg class="flow-sim" viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid meet">
-                  <!-- Arrows (lines) - primero para que queden detrás de los nodos -->
-                  <g class="arrows" fill="none" stroke-width="2">
-                    <path class="arrow a1" d="M96 90 L120 90" stroke="#4A5568" />
-                    <path class="arrow a2" d="M180 90 L200 90" stroke="#4A5568" />
-                    <path class="arrow a3" d="M260 90 L290 50" stroke="#4A5568" />
-                    <path class="arrow a4" d="M260 90 L290 130" stroke="#4A5568" />
-                    <path class="arrow a5" d="M354 45 L380 65" stroke="#4A5568" />
-                    <path class="arrow a6" d="M354 135 L380 120" stroke="#4A5568" />
-                  </g>
 
-                  <!-- Nodes - después de las flechas para que queden encima -->
-                  <g class="nodes">
-                    <g class="node" id="node-wa-client">
-                      <g transform="translate(40, 60)">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="#0891B2">
-                          <path
-                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
+            <div class="cs-image-wrapper" data-index="4">
+              <figure class="slider_picture">
+                <a href="https://www.kukastore.com.uy" target="_blank">
+                  <img src="assets/kukastore.webp" class="slider_img" alt="Vista previa de Kuka Store" loading="lazy" />
+                </a>
+              </figure>
+            </div>
+
+            <div class="cs-image-wrapper" data-index="5">
+              <figure class="slider_picture">
+                <a href="https://www.indiacueros.com.uy" target="_blank">
+                  <img src="assets/indiacueros.webp" class="slider_img" alt="Vista previa de India Cueros"
+                    loading="lazy" />
+                </a>
+              </figure>
+            </div>
+
+            <div class="cs-image-wrapper" data-index="6">
+              <figure class="slider_picture">
+                <div class="flow-wrap" role="img"
+                  aria-label="Simulación de flujo de automatización: n8n a Google Sheets, Gmail y WhatsApp">
+                  <svg class="flow-sim" viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet">
+                    <g class="arrows" fill="none" stroke-width="2">
+                      <path class="arrow a1" d="M96 90 L120 90" stroke="#4A5568" />
+                      <path class="arrow a2" d="M180 90 L200 90" stroke="#4A5568" />
+                      <path class="arrow a3" d="M260 90 L290 50" stroke="#4A5568" />
+                      <path class="arrow a4" d="M260 90 L290 130" stroke="#4A5568" />
+                      <path class="arrow a5" d="M354 45 L380 65" stroke="#4A5568" />
+                      <path class="arrow a6" d="M354 135 L380 120" stroke="#4A5568" />
+                    </g>
+                    <g class="nodes">
+                      <g class="node" id="node-wa-client">
+                        <g transform="translate(40, 60)">
+                          <svg width="50" height="50" viewBox="0 0 24 24" fill="#0891B2">
+                            <path
+                              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                          </svg>
+                        </g>
                       </g>
-                    </g>
-                    <g class="node" id="node-n8n">
-                      <foreignObject x="130" y="70" width="50" height="50">
-                        <img src="https://cdn.simpleicons.org/n8n/111827" alt="n8n" width="50" height="50"
-                          style="object-fit: contain;" />
-                      </foreignObject>
-                    </g>
-                    <g class="node" id="node-sheets">
-                      <foreignObject x="210" y="70" width="50" height="50">
-                        <img src="https://cdn.simpleicons.org/googlesheets/0F9D58" alt="Google Sheets" width="50"
-                          height="50" style="object-fit: contain;" />
-                      </foreignObject>
-                    </g>
-
-                    <!-- Yes branch (upper) -->
-                    <g class="node" id="node-wa-yes">
-                      <g transform="translate(300, 25)">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="#25D366">
-                          <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                        </svg>
+                      <g class="node" id="node-n8n">
+                        <foreignObject x="130" y="70" width="50" height="50">
+                          <img src="https://cdn.simpleicons.org/n8n/111827" alt="n8n" width="50" height="50"
+                            style="object-fit: contain;" />
+                        </foreignObject>
                       </g>
-                    </g>
-                    <g class="node" id="node-gmail-yes">
-                      <g transform="translate(400, 50)">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="#DB4437">
-                          <path
-                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                        </svg>
+                      <g class="node" id="node-sheets">
+                        <foreignObject x="210" y="70" width="50" height="50">
+                          <img src="https://cdn.simpleicons.org/googlesheets/0F9D58" alt="Google Sheets" width="50"
+                            height="50" style="object-fit: contain;" />
+                        </foreignObject>
                       </g>
-                    </g>
-
-                    <!-- No branch (lower) -->
-                    <g class="node" id="node-wa-no">
-                      <g transform="translate(300, 115)">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="#25D366">
-                          <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                        </svg>
+                      <g class="node" id="node-wa-yes">
+                        <g transform="translate(300, 25)">
+                          <svg width="50" height="50" viewBox="0 0 24 24" fill="#25D366">
+                            <path
+                              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                          </svg>
+                        </g>
                       </g>
-                    </g>
-                    <g class="node" id="node-gmail-no">
-                      <g transform="translate(400, 105)">
-                        <svg width="50" height="50" viewBox="0 0 24 24" fill="#DB4437">
-                          <path
-                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                        </svg>
+                      <g class="node" id="node-gmail-yes">
+                        <g transform="translate(400, 50)">
+                          <svg width="50" height="50" viewBox="0 0 24 24" fill="#DB4437">
+                            <path
+                              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                          </svg>
+                        </g>
                       </g>
+                      <g class="node" id="node-wa-no">
+                        <g transform="translate(300, 115)">
+                          <svg width="50" height="50" viewBox="0 0 24 24" fill="#25D366">
+                            <path
+                              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                          </svg>
+                        </g>
+                      </g>
+                      <g class="node" id="node-gmail-no">
+                        <g transform="translate(400, 105)">
+                          <svg width="50" height="50" viewBox="0 0 24 24" fill="#DB4437">
+                            <path
+                              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                          </svg>
+                        </g>
+                      </g>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-1" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Consulta del cliente</text>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-2" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Procesamiento en n8n</text>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-3" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Consulta en Google
+                        Sheets</text>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-4-yes" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Respuesta positiva al
+                        cliente</text>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-5-yes" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Aviso por correo al
+                        comercio</text>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-4-no" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Respuesta negativa al
+                        cliente</text>
+                      <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-5-no" fill="#4A5568"
+                        font-size="12" font-weight="600" font-family="var(--tipo-principal)">Aviso por correo al
+                        comercio</text>
                     </g>
-
-                    <!-- Label central único que cambia de texto siguiendo el flujo -->
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-1" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Consulta del cliente</text>
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-2" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Procesamiento en n8n</text>
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-3" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Consulta en Google
-                      Sheets</text>
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-4-yes" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Respuesta positiva al
-                      cliente</text>
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-5-yes" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Aviso por correo al
-                      comercio</text>
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-4-no" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Respuesta negativa al
-                      cliente</text>
-                    <text x="210" y="10" text-anchor="middle" class="flow-label flow-label-5-no" fill="#4A5568"
-                      font-size="12" font-weight="600" font-family="var(--tipo-principal)">Aviso por correo al
-                      comercio</text>
-                  </g>
-
-                  <!-- Moving dot that simulates conditional flow (yes first, then no) -->
-                  <circle class="flow-dot dot-single" cx="60" cy="90" r="8" fill="#10B981" />
-                </svg>
-              </div>
-            </figure>
-          </section>
-          <section class="slider_body" data-id="3">
-            <div class="slider_texts">
-              <h2 class="subtitle">Sitio web Touruguay</h2>
-              <div class="project-details">
-                <p class="project-context"><strong>Contexto:</strong> Proyecto académico para la carrera Certified Tech
-                  Developer (Digital House, Mercado Libre, Globant) desarrollando una plataforma de turismo completa.
-                </p>
-                <p class="project-solution"><strong>Solución:</strong> Plataforma con roles de usuario, sistema de
-                  reservas y gestión de destinos. Mi rol: Backend y DevOps con despliegue en la nube.</p>
-                <p class="project-tech"><strong>Tecnologías:</strong> Java + Spring Boot para backend, React para
-                  frontend, MySQL para base de datos, AWS para infraestructura, Docker para containerización, Ansible
-                  para automatización.</p>
-                <p class="project-results"><strong>Resultados:</strong> Proyecto funcional desplegado en la nube,
-                  demostrando trabajo en equipo, metodologías ágiles y habilidades DevOps completas.</p>
-              </div>
-              <span class="tag java">Java</span>
-              <span class="tag spring">Spring Boot</span>
-              <span class="tag react">React</span>
-              <span class="tag vite">Vite</span>
-              <span class="tag tailwind">Tailwind</span>
-              <span class="tag axios">Axios</span>
-              <span class="tag formik">Formik</span>
-              <span class="tag login">Login</span>
-              <span class="tag context">Context</span>
-              <span class="tag protected">Protected Routes</span>
-              <span class="tag canvas-confetti">Canvas Confetti</span>
-              <span class="tag mysql">MySQL</span>
-              <span class="tag aws">AWS</span>
-              <span class="tag ansible">Ansible</span>
-              <span class="tag bash">Bash</span>
-              <span class="tag git">Git</span>
-              <span class="tag github">GitHub</span>
-              <span class="tag postman">Postman</span>
+                    <circle class="flow-dot dot-single" cx="60" cy="90" r="8" fill="#10B981" />
+                  </svg>
+                </div>
+              </figure>
             </div>
-            <figure class="slider_picture">
-              <a href="https://touruguay-front-production.up.railway.app" target="_blank">
-                <img src="assets/Touruguay.webp" class="slider_img" alt="Vista previa del sitio web Touruguay"
-                  loading="lazy" />
-              </a>
-            </figure>
-          </section>
-          <img src="assets/rigthArrow.svg" class="slider_arrow" id="next" alt="Proyecto siguiente"
-            aria-label="Ver proyecto siguiente" />
+
+            <div class="cs-image-wrapper" data-index="7">
+              <figure class="slider_picture">
+                <a href="https://touruguay-front-production.up.railway.app" target="_blank">
+                  <img src="assets/Touruguay.webp" class="slider_img" alt="Vista previa del sitio web Touruguay"
+                    loading="lazy" />
+                </a>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Contenedor de Textos -->
+          <div class="cs-content-container">
+            <div class="cs-texts-container" id="cs-texts-container">
+
+              <!-- Project 5 -->
+              <div class="cs-text-wrapper active" data-index="0">
+                <h2 class="subtitle">EQM | Empresa de equipamiento médico</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> El cliente necesitaba gestionar stock, alquiler
+                    y venta de equipos médicos. Posteriormente se incorporó facturación electrónica.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Sistema integral de gestión desarrollado en
+                    VB.NET con PostgreSQL, operativo desde hace más de 8 años con mantenimiento continuo.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> VB.NET para lógica de negocio, PostgreSQL para
+                    base de datos, e-Factura para facturación electrónica.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Sistema estable operativo por más de 8 años,
+                    gestión integral de operaciones y facturación electrónica implementada exitosamente.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag vb-net">VB.NET</span>
+                  <span class="tag postgresql">PostgreSQL</span>
+                  <span class="tag eFactura">e-Factura</span>
+                </div>
+              </div>
+
+              <!-- Project 6 -->
+              <div class="cs-text-wrapper exit" data-index="1">
+                <h2 class="subtitle">Nexo 360 | Empresa de equipamiento médico</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Empresa de equipamiento médico y servicios de
+                    acompañamiento con 2 sistemas legacy separados (10+ años de data): EQM y GISA. Operaban con procesos
+                    manuales duplicados, datos inconsistentes y falta de integración entre sistemas.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Sistema integral moderno (ERP + CRM) con
+                    arquitectura de microservicios que unifica ambos sistemas legacy. Incluye gestión de
+                    clientes/socios, inventario de equipos médicos, servicios de acompañamiento, facturación
+                    electrónica, reportes analíticos y dashboard ejecutivo.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> Spring Boot, React + Refine, Keycloak, Docker +
+                    Docker Compose, PostgreSQL, Kafka, ELK Stack, GitHub Actions.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Proyecto en desarrollo activo (Fase 3 de 4).
+                    Arquitectura completa desplegada con Keycloak, microservicios operativos y módulos core funcionando.
+                  </p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag spring-boot">Spring Boot</span>
+                  <span class="tag react">React</span>
+                  <span class="tag postgresql">PostgreSQL</span>
+                  <span class="tag keycloak">Keycloak</span>
+                  <span class="tag docker">Docker</span>
+                  <span class="tag kafka">Kafka</span>
+                  <span class="tag elasticsearch">ElasticSearch</span>
+                  <span class="tag jira">Jira</span>
+                  <span class="tag confluence">Confluence</span>
+                </div>
+              </div>
+
+              <!-- Project 4 -->
+              <div class="cs-text-wrapper exit" data-index="2">
+                <h2 class="subtitle">Gestión Deportiva | Club Yerbalito de Fútbol</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Club de baby fútbol con 160+ jugadores en 11
+                    categorías gestionaba cuotas manualmente con planillas Excel, generando errores, pagos duplicados y
+                    pérdida de tiempo administrativo.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Sistema web completo con gestión de jugadores,
+                    pagos mensuales, generación de comprobantes PDF, reportes anuales, fixture de partidos y blog de
+                    noticias. Incluye sistema de hermanos con pagos compartidos y notificaciones de cumpleaños.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> React + Vite para frontend, Node.js + Express
+                    para backend, MySQL para base de datos, Material-UI + Tailwind para UI, Docker para despliegue.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Sistema operativo hace 8+ años con
+                    actualizaciones continuas. Reducción del 90% en tiempo administrativo, eliminación de errores de
+                    cobro, comprobantes automáticos.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag react">React</span>
+                  <span class="tag nodejs">Node.js</span>
+                  <span class="tag express">Express</span>
+                  <span class="tag mysql">MySQL</span>
+                  <span class="tag material-ui">Material UI</span>
+                  <span class="tag tailwind">Tailwind</span>
+                  <span class="tag docker">Docker</span>
+                </div>
+              </div>
+
+              <!-- Project 1 -->
+              <div class="cs-text-wrapper exit" data-index="3">
+                <h2 class="subtitle">e-commerce</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Desarrollo de plataforma eCommerce personal para
+                    demostrar habilidades full-stack y crear una base reutilizable para proyectos comerciales.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Plataforma completa con catálogo de productos,
+                    carrito de compras, sistema de pagos integrado y panel de administración.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, MercadoPago, Firebase,
+                    Formik, Yup.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Proyecto funcional que sirvió como base para
+                    proyectos comerciales posteriores, demostrando habilidades full-stack completas.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag react">React</span>
+                  <span class="tag nodejs">Node.js</span>
+                  <span class="tag vite">Vite</span>
+                  <span class="tag mercado-pago">Mercado Pago</span>
+                  <span class="tag firebase">Firebase</span>
+                </div>
+              </div>
+
+              <!-- Project 7 -->
+              <div class="cs-text-wrapper exit" data-index="4">
+                <h2 class="subtitle">e-commerce | Kuka Store</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Tienda de vestimenta para jóvenes necesitaba
+                    expandirse al canal online y automatizar procesos de venta.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Plataforma eCommerce completa con catálogo de
+                    productos, carrito de compras, sistema de pagos y panel de administración.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, MercadoPago, Firebase.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Tienda online operativa, aumento de alcance de
+                    clientes y automatización completa del proceso de ventas.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag react">React</span>
+                  <span class="tag firebase">Firebase</span>
+                  <span class="tag mercado-pago">Mercado Pago</span>
+                </div>
+              </div>
+
+              <!-- Project 8 -->
+              <div class="cs-text-wrapper exit" data-index="5">
+                <h2 class="subtitle">e-commerce | India Cueros</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Negocio de artesanías y artículos en cuero
+                    necesitaba establecer presencia online y mostrar su catálogo de productos.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Sitio web corporativo con catálogo de
+                    productos, información del negocio y formulario de contacto.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> React, Material UI, Firebase.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Presencia online establecida, mejor
+                    visibilidad en buscadores y canal de contacto directo con clientes.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag react">React</span>
+                  <span class="tag firebase">Firebase</span>
+                </div>
+              </div>
+
+              <!-- Project 9 -->
+              <div class="cs-text-wrapper exit" data-index="6">
+                <h2 class="subtitle">Automatizaciones con n8n</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Demostración ligera de cómo una automatización
+                    orquesta acciones entre servicios: captura un evento, guarda datos en Google Sheets, envía un correo
+                    y notifica por WhatsApp.</p>
+                  <p class="project-solution"><strong>Simulación:</strong> Animación interactiva y repetitiva que
+                    muestra el flujo de datos entre los nodos representativos (n8n, Google Sheets, Gmail, WhatsApp).</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> n8n (orquestación), Webhooks, Google Sheets API,
+                    Gmail API, WhatsApp API (simulado).</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag n8n">n8n</span>
+                  <span class="tag google-sheets">Google Sheets</span>
+                  <span class="tag gmail">Gmail</span>
+                  <span class="tag whatsapp">WhatsApp</span>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="cs-text-wrapper exit" data-index="7">
+                <h2 class="subtitle">Sitio web Touruguay</h2>
+                <div class="project-details">
+                  <p class="project-context"><strong>Contexto:</strong> Proyecto académico desarrollando una plataforma
+                    de turismo completa.</p>
+                  <p class="project-solution"><strong>Solución:</strong> Plataforma con roles de usuario, sistema de
+                    reservas y gestión de destinos. Mi rol: Backend y DevOps con despliegue en la nube.</p>
+                  <p class="project-tech"><strong>Tecnologías:</strong> Java + Spring Boot para backend, React para
+                    frontend, MySQL, AWS, Docker, Ansible.</p>
+                  <p class="project-results"><strong>Resultados:</strong> Proyecto funcional desplegado en la nube,
+                    demostrando trabajo en equipo, metodologías ágiles y habilidades DevOps completas.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag java">Java</span>
+                  <span class="tag spring">Spring Boot</span>
+                  <span class="tag react">React</span>
+                  <span class="tag aws">AWS</span>
+                  <span class="tag mysql">MySQL</span>
+                  <span class="tag docker">Docker</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="cs-arrows">
+              <button class="cs-arrow cs-prev" aria-label="Proyecto anterior"><i class="fas fa-arrow-left"></i></button>
+              <button class="cs-arrow cs-next" aria-label="Siguiente proyecto"><i
+                  class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
         </div>
       </div>
       <!-- FIN DE LOS PROYECTOS -->
-      <script src="js/sliders.js"></script>
+      <script src="js/circular-slider.js"></script>
+      <script src="js/animated-services.js"></script>
     </section>
 
     <section class="seccion skills" id="skills">
@@ -668,23 +625,26 @@
           <h3 class="h3">Frontend</h3>
           <div class="magnetic-dock-shell magnetic-dock-shell--skills">
             <div class="magnetic-dock skills-magnetic-dock magnetic-dock--vertical" aria-label="Tecnologías Frontend">
-              <a class="a magnetic-dock__link" title="javascript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="javascript"
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                   alt="javascript" width="40" height="40" aria-hidden="true" loading="lazy" />
               </a>
-              <a class="a magnetic-dock__link" title="react" href="https://reactjs.org/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="react" href="https://reactjs.org/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                   alt="react" width="40" height="40" aria-hidden="true" loading="lazy" />
               </a>
-              <a class="a magnetic-dock__link" title="html" href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="html" href="https://www.w3.org/html/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                   alt="html5" width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="css" href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="css" href="https://www.w3schools.com/css/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                   alt="css3" width="40" height="40" aria-hidden="true" />
@@ -697,12 +657,14 @@
           <h3 class="h3">Backend</h3>
           <div class="magnetic-dock-shell magnetic-dock-shell--skills">
             <div class="magnetic-dock skills-magnetic-dock magnetic-dock--vertical" aria-label="Tecnologías Backend">
-              <a class="a magnetic-dock__link" title="java" href="https://www.java.com" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="java" href="https://www.java.com" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
-                  width="40" height="40" aria-hidden="true" />
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                  alt="java" width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="spring" href="https://spring.io/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="spring" href="https://spring.io/" target="_blank"
+                rel="noreferrer">
                 <img class="svg" src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring"
                   width="40" height="40" aria-hidden="true" />
               </a>
@@ -715,12 +677,14 @@
           <h3 class="h3">Bases de datos</h3>
           <div class="magnetic-dock-shell magnetic-dock-shell--skills">
             <div class="magnetic-dock skills-magnetic-dock magnetic-dock--vertical" aria-label="Bases de datos">
-              <a class="a magnetic-dock__link" title="mysql" href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="mysql" href="https://www.mysql.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
                   alt="mysql" width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="postgresql" href="https://www.postgresql.org" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="postgresql" href="https://www.postgresql.org" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
                   alt="postgresql" width="40" height="40" aria-hidden="true" />
@@ -734,25 +698,30 @@
           <h3 class="h3">DevOps</h3>
           <div class="magnetic-dock-shell magnetic-dock-shell--skills">
             <div class="magnetic-dock skills-magnetic-dock magnetic-dock--vertical" aria-label="DevOps">
-              <a class="a magnetic-dock__link" title="docker" href="https://www.docker.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="docker" href="https://www.docker.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
                   alt="docker" width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="aws" href="https://aws.amazon.com" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="aws" href="https://aws.amazon.com" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
                   alt="aws" width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="bash" href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer">
-                <img class="svg" src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40"
-                  height="40" aria-hidden="true" />
+              <a class="a magnetic-dock__link" title="bash" href="https://www.gnu.org/software/bash/" target="_blank"
+                rel="noreferrer">
+                <img class="svg" src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash"
+                  width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="firebase" href="https://firebase.google.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="firebase" href="https://firebase.google.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg" src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase"
                   width="40" height="40" aria-hidden="true" loading="lazy" />
               </a>
-              <a class="a magnetic-dock__link" title="vercel" href="https://vercel.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="vercel" href="https://vercel.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg"
                   alt="vercel" width="40" height="40" aria-hidden="true" loading="lazy" />
@@ -770,11 +739,13 @@
           <h3 class="h3">Tecnologías</h3>
           <div class="magnetic-dock-shell magnetic-dock-shell--skills">
             <div class="magnetic-dock skills-magnetic-dock magnetic-dock--vertical" aria-label="Herramientas">
-              <a class="a magnetic-dock__link" title="figma" href="https://www.figma.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="figma" href="https://www.figma.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg" src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40"
                   height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="postman" href="https://postman.com" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="postman" href="https://postman.com" target="_blank"
+                rel="noreferrer">
                 <img class="svg" src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman"
                   width="40" height="40" aria-hidden="true" />
               </a>
@@ -782,7 +753,8 @@
                 <img class="svg" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40"
                   height="40" aria-hidden="true" loading="lazy" />
               </a>
-              <a class="a magnetic-dock__link" title="github" href="https://github.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="github" href="https://github.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
                   alt="github" width="40" height="40" aria-hidden="true" loading="lazy" />
@@ -795,15 +767,18 @@
           <h3 class="h3">Gestión de Proyectos</h3>
           <div class="magnetic-dock-shell magnetic-dock-shell--skills">
             <div class="magnetic-dock skills-magnetic-dock magnetic-dock--vertical" aria-label="Gestión de proyectos">
-              <a class="a magnetic-dock__link" title="jira" href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">
-                <img class="svg" src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="jira" width="40" height="40"
-                  aria-hidden="true" loading="lazy" />
+              <a class="a magnetic-dock__link" title="jira" href="https://www.atlassian.com/software/jira"
+                target="_blank" rel="noreferrer">
+                <img class="svg" src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="jira" width="40"
+                  height="40" aria-hidden="true" loading="lazy" />
               </a>
-              <a class="a magnetic-dock__link" title="trello" href="https://trello.com/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="trello" href="https://trello.com/" target="_blank"
+                rel="noreferrer">
                 <img class="svg" src="https://www.vectorlogo.zone/logos/trello/trello-icon.svg" alt="trello" width="40"
                   height="40" aria-hidden="true" loading="lazy" />
               </a>
-              <a class="a magnetic-dock__link" title="notion" href="https://www.notion.so/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="notion" href="https://www.notion.so/" target="_blank"
+                rel="noreferrer">
                 <img class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
                   alt="notion" width="40" height="40" aria-hidden="true" loading="lazy" />
               </a>
@@ -820,7 +795,8 @@
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php"
                   width="40" height="40" aria-hidden="true" />
               </a>
-              <a class="a magnetic-dock__link" title="linux" href="https://www.linux.org/" target="_blank" rel="noreferrer">
+              <a class="a magnetic-dock__link" title="linux" href="https://www.linux.org/" target="_blank"
+                rel="noreferrer">
                 <img class="svg"
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
                   alt="linux" width="40" height="40" aria-hidden="true" />
@@ -837,15 +813,20 @@
       <div class="about-content">
         <div class="about-story">
           <p class="p">
-            👋 Soy Michael, un <strong>Desarrollador Full Stack</strong> con más de 10 años construyendo soluciones para operaciones reales. Combino experiencia en telecomunicaciones con desarrollo de software, lo que me da una visión práctica de cómo la tecnología debe sostener negocios y procesos.
+            👋 Soy Michael, un <strong>Desarrollador Full Stack</strong> con más de 10 años construyendo soluciones para
+            operaciones reales. Combino experiencia en telecomunicaciones con desarrollo de software, lo que me da una
+            visión práctica de cómo la tecnología debe sostener negocios y procesos.
           </p>
 
           <p class="p">
-            Trabajo con React, Node.js y Spring Boot, enfocándome en arquitectura mantenible,   performance y despliegue confiable (Docker, AWS, CI/CD). He mantenido sistemas en   producción por más de 8 años, priorizando estabilidad, tiempos de respuesta y   evolución continua.
+            Trabajo con React, Node.js y Spring Boot, enfocándome en arquitectura mantenible, performance y despliegue
+            confiable (Docker, AWS, CI/CD). He mantenido sistemas en producción por más de 8 años, priorizando
+            estabilidad, tiempos de respuesta y evolución continua.
           </p>
 
           <p class="p">
-            Aporto una visión de negocio para liderar integraciones complejas—como la migración de sistemas legacy o la automatización orquestada de procesos operativos—entregando soluciones arquitectónicas <i>end-to-end</i>.
+            Aporto una visión de negocio para liderar integraciones complejas—como la migración de sistemas legacy o la
+            automatización orquestada de procesos operativos—entregando soluciones arquitectónicas <i>end-to-end</i>.
           </p>
 
           <p class="p">
@@ -974,27 +955,32 @@
 
           <div class="magnetic-dock-shell">
             <div class="contacto-redes-inline magnetic-dock" aria-label="Enlaces a redes sociales">
-              <a class="magnetic-dock__link" href="https://www.linkedin.com/in/michaelrodriguezuy" target="_blank" rel="noopener noreferrer"
-                title="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <a class="magnetic-dock__link" href="https://www.linkedin.com/in/michaelrodriguezuy" target="_blank"
+                rel="noopener noreferrer" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"
+                  aria-hidden="true">
                   <path
                     d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
                 </svg>
               </a>
-              <a class="magnetic-dock__link" href="https://github.com/michaelrodriguezuy" target="_blank" rel="noopener noreferrer" title="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <a class="magnetic-dock__link" href="https://github.com/michaelrodriguezuy" target="_blank"
+                rel="noopener noreferrer" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"
+                  aria-hidden="true">
                   <path
                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                 </svg>
               </a>
-              <a class="magnetic-dock__link" href="https://discord.com/channels/michaelrodriguezuy" target="_blank" rel="noopener noreferrer"
-                title="Discord">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <a class="magnetic-dock__link" href="https://discord.com/channels/michaelrodriguezuy" target="_blank"
+                rel="noopener noreferrer" title="Discord">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"
+                  aria-hidden="true">
                   <path
                     d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
                 </svg>
               </a>
-              <a class="magnetic-dock__link" href="https://wa.me/59899163200?text=Hola%20Michael,%20te%20contacto%20desde%20tu%20web%20personal."
+              <a class="magnetic-dock__link"
+                href="https://wa.me/59899163200?text=Hola%20Michael,%20te%20contacto%20desde%20tu%20web%20personal."
                 target="_blank" rel="noopener noreferrer" title="WhatsApp">
                 <i class="fab fa-whatsapp" aria-hidden="true"></i>
               </a>
